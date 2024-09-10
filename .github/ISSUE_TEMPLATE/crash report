@@ -1,0 +1,6032 @@
+	Beatblock crashed unexpectedly. Crash Log:
+
+	--- SYSTEM INFO ---
+
+	OS: Windows
+	CPU Processors: 8
+	Game Version: 0.2.0 (Demo)
+
+	--- CRASH LOG ---
+
+	lib/ricewine.lua:100: attempt to index local 'obj' (a nil value)
+stack traceback:
+	main.lua:526: in function 'handler'
+	[love "boot.lua"]:431: in function '__newindex'
+	lib/ricewine.lua:100: in function 'to'
+	lib/ricewine.lua:26: in function 'easenow'
+	lib/ricewine.lua:51: in function 'func'
+	lib/ricewine.lua:83: in function 'update'
+	obj/GameManager.lua:736: in function 'update'
+	states/Game.lua:62: in function 'updateFunc'
+	main.lua:170: in function 'update'
+	main.lua:417: in function 'update'
+	[love "callbacks.lua"]:174: in function <[love "callbacks.lua"]:156>
+	[C]: in function 'xpcall'
+	[love "boot.lua"]:456: in function <[love "boot.lua"]:423>
+
+	--- VARIABLE DUMP ---
+
+	cs:
+	{
+  autoplay = false,
+  barelies = 0,
+  beatsounds = true,
+  bg = <userdata 1>,
+  bgColor = "white",
+  bgDrawFunc = <function 1>,
+  cBeat = -4.1201995999998,
+  canv = <userdata 2>,
+  class = {
+    __declaredMethods = {
+      __tostring = <function 2>,
+      draw = <function 3>,
+      init = <function 4>,
+      initialize = <function 5>,
+      isInstanceOf = <function 6>,
+      setBgDraw = <function 7>,
+      setFgDraw = <function 8>,
+      setInit = <function 9>,
+      setUpdate = <function 10>,
+      update = <function 11>
+    },
+    __instanceDict = <1>{
+      __index = <table 1>,
+      __tostring = <function 2>,
+      draw = <function 3>,
+      init = <function 4>,
+      initialize = <function 5>,
+      isInstanceOf = <function 6>,
+      setBgDraw = <function 7>,
+      setFgDraw = <function 8>,
+      setInit = <function 9>,
+      setUpdate = <function 10>,
+      update = <function 11>
+    },
+    name = "Gamestate",
+    static = <2>{
+      allocate = <function 12>,
+      include = <function 13>,
+      isSubclassOf = <function 14>,
+      new = <function 15>,
+      subclass = <function 16>,
+      subclassed = <function 17>,
+      <metatable> = {
+        __index = <function 18>
+      }
+    },
+    subclasses = {
+      <metatable> = {
+        __mode = "k"
+      }
+    },
+    <metatable> = {
+      __call = <function 19>,
+      __index = <table 2>,
+      __newindex = <function 20>,
+      __tostring = <function 21>
+    }
+  },
+  combo = 0,
+  eventQueue = {},
+  extraHoldLeniency = 0,
+  fgDrawFunc = <function 22>,
+  gm = {
+    class = <3>{
+      __declaredMethods = {
+        addToScore = <function 23>,
+        beatToMs = <function 24>,
+        checkEvent = <function 25>,
+        draw = <function 26>,
+        drawCanv = <function 27>,
+        drawExpandedHud = <function 28>,
+        endOnTopShader = <function 29>,
+        getBPM = <function 30>,
+        getVFXAngle = <function 31>,
+        gradeCalc = <function 32>,
+        handleMiss = <function 33>,
+        inTimingWindow = <function 34>,
+        initialize = <function 35>,
+        msToBeat = <function 36>,
+        newTap = <function 37>,
+        resetLevel = <function 38>,
+        runQueuedEvents = <function 39>,
+        startOnTopShader = <function 40>,
+        stopLevel = <function 41>,
+        update = <function 42>,
+        updateTaps = <function 43>
+      },
+      __instanceDict = <4>{
+        __index = <table 4>,
+        __tostring = <function 2>,
+        addToScore = <function 23>,
+        beatToMs = <function 24>,
+        checkEvent = <function 25>,
+        draw = <function 26>,
+        drawCanv = <function 27>,
+        drawExpandedHud = <function 28>,
+        endOnTopShader = <function 29>,
+        getBPM = <function 30>,
+        getVFXAngle = <function 31>,
+        gradeCalc = <function 32>,
+        handleMiss = <function 33>,
+        inTimingWindow = <function 34>,
+        initialize = <function 35>,
+        isInstanceOf = <function 6>,
+        msToBeat = <function 36>,
+        newTap = <function 37>,
+        resetLevel = <function 38>,
+        runQueuedEvents = <function 39>,
+        startOnTopShader = <function 40>,
+        stopLevel = <function 41>,
+        update = <function 42>,
+        updateTaps = <function 43>
+      },
+      name = "GameManager",
+      static = <5>{
+        <metatable> = {
+          __index = <function 44>
+        }
+      },
+      subclasses = {
+        <metatable> = {
+          __mode = "k"
+        }
+      },
+      super = <6>{
+        __declaredMethods = {
+          __tostring = <function 2>,
+          draw = <function 45>,
+          initialize = <function 46>,
+          isInstanceOf = <function 6>,
+          update = <function 47>
+        },
+        __instanceDict = <7>{
+          __index = <table 7>,
+          __tostring = <function 2>,
+          draw = <function 45>,
+          initialize = <function 46>,
+          isInstanceOf = <function 6>,
+          update = <function 47>
+        },
+        name = "Entity",
+        static = <8>{
+          allocate = <function 12>,
+          include = <function 13>,
+          isSubclassOf = <function 14>,
+          new = <function 15>,
+          subclass = <function 16>,
+          subclassed = <function 17>,
+          <metatable> = {
+            __index = <function 48>
+          }
+        },
+        subclasses = {
+          [{
+            __declaredMethods = {
+              draw = <function 49>,
+              initialize = <function 50>,
+              update = <function 51>
+            },
+            __instanceDict = <9>{
+              __index = <table 9>,
+              __tostring = <function 2>,
+              draw = <function 49>,
+              initialize = <function 50>,
+              isInstanceOf = <function 6>,
+              update = <function 51>
+            },
+            name = "TitleParticle",
+            static = <10>{
+              <metatable> = {
+                __index = <function 52>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 10>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              getLevelSaveName = <function 53>,
+              initialize = <function 54>,
+              iterateEvents = <function 55>,
+              loadLevel = <function 56>,
+              loadMetadata = <function 57>,
+              newLevel = <function 58>,
+              saveLevel = <function 59>,
+              upgradeLevel = <function 60>
+            },
+            __instanceDict = <11>{
+              __index = <table 11>,
+              __tostring = <function 2>,
+              draw = <function 45>,
+              getLevelSaveName = <function 53>,
+              initialize = <function 54>,
+              isInstanceOf = <function 6>,
+              iterateEvents = <function 55>,
+              loadLevel = <function 56>,
+              loadMetadata = <function 57>,
+              newLevel = <function 58>,
+              saveLevel = <function 59>,
+              update = <function 47>,
+              upgradeLevel = <function 60>
+            },
+            name = "LevelManager",
+            static = <12>{
+              <metatable> = {
+                __index = <function 61>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 12>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 62>,
+              initialize = <function 63>,
+              update = <function 64>
+            },
+            __instanceDict = <13>{
+              __index = <table 13>,
+              __tostring = <function 2>,
+              draw = <function 62>,
+              initialize = <function 63>,
+              isInstanceOf = <function 6>,
+              update = <function 64>
+            },
+            name = "Tutorial",
+            static = <14>{
+              <metatable> = {
+                __index = <function 65>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 14>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 66>,
+              exitLevel = <function 67>,
+              finish = <function 68>,
+              initialize = <function 69>,
+              onQuit = <function 70>,
+              update = <function 71>
+            },
+            __instanceDict = <15>{
+              __index = <table 15>,
+              __tostring = <function 2>,
+              draw = <function 66>,
+              exitLevel = <function 67>,
+              finish = <function 68>,
+              initialize = <function 69>,
+              isInstanceOf = <function 6>,
+              onQuit = <function 70>,
+              update = <function 71>
+            },
+            name = "Calibration",
+            static = <16>{
+              <metatable> = {
+                __index = <function 72>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 16>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 73>,
+              initialize = <function 74>,
+              update = <function 75>
+            },
+            __instanceDict = <17>{
+              __index = <table 17>,
+              __tostring = <function 2>,
+              draw = <function 73>,
+              initialize = <function 74>,
+              isInstanceOf = <function 6>,
+              update = <function 75>
+            },
+            name = "MissParticle",
+            static = <18>{
+              <metatable> = {
+                __index = <function 76>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 18>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              addOnBeatHook = <function 77>,
+              clearOnBeatHooks = <function 78>,
+              draw = <function 79>,
+              initialize = <function 80>,
+              play = <function 81>,
+              stop = <function 82>,
+              update = <function 83>
+            },
+            __instanceDict = <19>{
+              __index = <table 19>,
+              __tostring = <function 2>,
+              addOnBeatHook = <function 77>,
+              clearOnBeatHooks = <function 78>,
+              draw = <function 79>,
+              initialize = <function 80>,
+              isInstanceOf = <function 6>,
+              play = <function 81>,
+              stop = <function 82>,
+              update = <function 83>
+            },
+            name = "MenuMusicManager",
+            static = <20>{
+              <metatable> = {
+                __index = <function 84>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 20>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 85>,
+              initialize = <function 86>,
+              update = <function 87>
+            },
+            __instanceDict = <21>{
+              __index = <table 21>,
+              __tostring = <function 2>,
+              draw = <function 85>,
+              initialize = <function 86>,
+              isInstanceOf = <function 6>,
+              update = <function 87>
+            },
+            name = "HitParticle",
+            static = <22>{
+              <metatable> = {
+                __index = <function 88>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 22>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 89>,
+              initParticleSys = <function 90>,
+              initialize = <function 91>,
+              update = <function 92>
+            },
+            __instanceDict = <23>{
+              __index = <table 23>,
+              __tostring = <function 2>,
+              draw = <function 89>,
+              initParticleSys = <function 90>,
+              initialize = <function 91>,
+              isInstanceOf = <function 6>,
+              update = <function 92>
+            },
+            name = "SideParticle",
+            static = <24>{
+              <metatable> = {
+                __index = <function 93>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 24>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 94>,
+              initialize = <function 95>,
+              update = <function 96>
+            },
+            __instanceDict = <25>{
+              __index = <table 25>,
+              __tostring = <function 2>,
+              draw = <function 94>,
+              initialize = <function 95>,
+              isInstanceOf = <function 6>,
+              update = <function 96>
+            },
+            name = "RainBG",
+            static = <26>{
+              <metatable> = {
+                __index = <function 97>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 26>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [<27>{
+            __declaredMethods = {
+              doPaddleFeedback = <function 98>,
+              draw = <function 99>,
+              getDistance = <function 100>,
+              growTransition = <function 101>,
+              hurtPulse = <function 102>,
+              initialize = <function 103>,
+              newPaddle = <function 104>,
+              savePaddleSize = <function 105>,
+              update = <function 106>
+            },
+            __instanceDict = <28>{
+              __index = <table 28>,
+              __tostring = <function 2>,
+              doPaddleFeedback = <function 98>,
+              draw = <function 99>,
+              getDistance = <function 100>,
+              growTransition = <function 101>,
+              hurtPulse = <function 102>,
+              initialize = <function 103>,
+              isInstanceOf = <function 6>,
+              newPaddle = <function 104>,
+              savePaddleSize = <function 105>,
+              update = <function 106>
+            },
+            name = "Player",
+            static = <29>{
+              <metatable> = {
+                __index = <function 107>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 29>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 108>,
+              initialize = <function 109>,
+              update = <function 110>
+            },
+            __instanceDict = <30>{
+              __index = <table 30>,
+              __tostring = <function 2>,
+              draw = <function 108>,
+              initialize = <function 109>,
+              isInstanceOf = <function 6>,
+              update = <function 110>
+            },
+            name = "Exampleentity",
+            static = <31>{
+              <metatable> = {
+                __index = <function 111>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 31>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 112>,
+              initialize = <function 113>,
+              update = <function 114>
+            },
+            __instanceDict = <32>{
+              __index = <table 32>,
+              __tostring = <function 2>,
+              draw = <function 112>,
+              initialize = <function 113>,
+              isInstanceOf = <function 6>,
+              update = <function 114>
+            },
+            name = "TutorialBG",
+            static = <33>{
+              <metatable> = {
+                __index = <function 115>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 33>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              addSection = <function 116>,
+              changeOffset = <function 117>,
+              draw = <function 118>,
+              initialize = <function 119>,
+              resetPlayerRot = <function 120>,
+              update = <function 121>
+            },
+            __instanceDict = <34>{
+              __index = <table 34>,
+              __tostring = <function 2>,
+              addSection = <function 116>,
+              changeOffset = <function 117>,
+              draw = <function 118>,
+              initialize = <function 119>,
+              isInstanceOf = <function 6>,
+              resetPlayerRot = <function 120>,
+              update = <function 121>
+            },
+            name = "LawrenceBG",
+            static = <35>{
+              <metatable> = {
+                __index = <function 122>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 35>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 123>,
+              drawBG = <function 124>,
+              endStencil = <function 125>,
+              initialize = <function 126>,
+              newRaindrop = <function 127>,
+              startStencil = <function 128>,
+              update = <function 129>
+            },
+            __instanceDict = <36>{
+              __index = <table 36>,
+              __tostring = <function 2>,
+              draw = <function 123>,
+              drawBG = <function 124>,
+              endStencil = <function 125>,
+              initialize = <function 126>,
+              isInstanceOf = <function 6>,
+              newRaindrop = <function 127>,
+              startStencil = <function 128>,
+              update = <function 129>
+            },
+            name = "Rain",
+            static = <37>{
+              <metatable> = {
+                __index = <function 130>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 37>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [<38>{
+            __declaredMethods = {
+              draw = <function 131>,
+              drawMain = <function 132>,
+              initialize = <function 133>,
+              update = <function 134>,
+              updateSprite = <function 135>
+            },
+            __instanceDict = <39>{
+              __index = <table 39>,
+              __tostring = <function 2>,
+              draw = <function 131>,
+              drawMain = <function 132>,
+              initialize = <function 133>,
+              isInstanceOf = <function 6>,
+              update = <function 134>,
+              updateSprite = <function 135>
+            },
+            name = "Deco",
+            static = <40>{
+              <metatable> = {
+                __index = <function 136>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 40>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [<41>{
+            __declaredMethods = {
+              checkIfActive = <function 137>,
+              checkPassedWindow = <function 138>,
+              checkTap = <function 139>,
+              checkTouchingPaddle = <function 140>,
+              cleanup = <function 141>,
+              draw = <function 142>,
+              drawSprite = <function 143>,
+              drawTap = <function 144>,
+              getPositions = <function 145>,
+              getTapMult = <function 146>,
+              inTimingWindow = <function 147>,
+              initialize = <function 148>,
+              makeParticles = <function 149>,
+              onHit = <function 150>,
+              onMiss = <function 151>,
+              update = <function 152>,
+              updateAngle = <function 153>,
+              updateOrigin = <function 154>,
+              updatePositions = <function 155>,
+              updateProgress = <function 156>
+            },
+            __instanceDict = <42>{
+              __index = <table 42>,
+              __tostring = <function 2>,
+              checkIfActive = <function 137>,
+              checkPassedWindow = <function 138>,
+              checkTap = <function 139>,
+              checkTouchingPaddle = <function 140>,
+              cleanup = <function 141>,
+              draw = <function 142>,
+              drawSprite = <function 143>,
+              drawTap = <function 144>,
+              getPositions = <function 145>,
+              getTapMult = <function 146>,
+              inTimingWindow = <function 147>,
+              initialize = <function 148>,
+              isInstanceOf = <function 6>,
+              makeParticles = <function 149>,
+              onHit = <function 150>,
+              onMiss = <function 151>,
+              update = <function 152>,
+              updateAngle = <function 153>,
+              updateOrigin = <function 154>,
+              updatePositions = <function 155>,
+              updateProgress = <function 156>
+            },
+            name = "Block",
+            static = <43>{
+              <metatable> = {
+                __index = <function 157>
+              }
+            },
+            subclasses = {
+              [{
+                __declaredMethods = {
+                  initialize = <function 158>,
+                  update = <function 159>
+                },
+                __instanceDict = <44>{
+                  __index = <table 44>,
+                  __tostring = <function 2>,
+                  checkIfActive = <function 137>,
+                  checkPassedWindow = <function 138>,
+                  checkTap = <function 139>,
+                  checkTouchingPaddle = <function 140>,
+                  cleanup = <function 141>,
+                  draw = <function 142>,
+                  drawSprite = <function 143>,
+                  drawTap = <function 144>,
+                  getPositions = <function 145>,
+                  getTapMult = <function 146>,
+                  inTimingWindow = <function 147>,
+                  initialize = <function 158>,
+                  isInstanceOf = <function 6>,
+                  makeParticles = <function 149>,
+                  onHit = <function 150>,
+                  onMiss = <function 151>,
+                  update = <function 159>,
+                  updateAngle = <function 153>,
+                  updateOrigin = <function 154>,
+                  updatePositions = <function 155>,
+                  updateProgress = <function 156>
+                },
+                name = "Mine",
+                static = <45>{
+                  <metatable> = {
+                    __index = <function 160>
+                  }
+                },
+                subclasses = {
+                  <metatable> = {
+                    __mode = "k"
+                  }
+                },
+                super = <table 41>,
+                <metatable> = {
+                  __call = <function 19>,
+                  __index = <table 45>,
+                  __newindex = <function 20>,
+                  __tostring = <function 21>
+                }
+              }] = true,
+              [<46>{
+                __declaredMethods = {
+                  checkEndPassedWindow = <function 161>,
+                  checkEndTap = <function 162>,
+                  cleanup = <function 163>,
+                  draw = <function 164>,
+                  drawHold = <function 165>,
+                  getPositions = <function 166>,
+                  initialize = <function 167>,
+                  update = <function 168>,
+                  updateDuringHit = <function 169>
+                },
+                __instanceDict = <47>{
+                  __index = <table 47>,
+                  __tostring = <function 2>,
+                  checkEndPassedWindow = <function 161>,
+                  checkEndTap = <function 162>,
+                  checkIfActive = <function 137>,
+                  checkPassedWindow = <function 138>,
+                  checkTap = <function 139>,
+                  checkTouchingPaddle = <function 140>,
+                  cleanup = <function 163>,
+                  draw = <function 164>,
+                  drawHold = <function 165>,
+                  drawSprite = <function 143>,
+                  drawTap = <function 144>,
+                  getPositions = <function 166>,
+                  getTapMult = <function 146>,
+                  inTimingWindow = <function 147>,
+                  initialize = <function 167>,
+                  isInstanceOf = <function 6>,
+                  makeParticles = <function 149>,
+                  onHit = <function 150>,
+                  onMiss = <function 151>,
+                  update = <function 168>,
+                  updateAngle = <function 153>,
+                  updateDuringHit = <function 169>,
+                  updateOrigin = <function 154>,
+                  updatePositions = <function 155>,
+                  updateProgress = <function 156>
+                },
+                name = "Hold",
+                static = <48>{
+                  <metatable> = {
+                    __index = <function 170>
+                  }
+                },
+                subclasses = {
+                  [{
+                    __declaredMethods = {
+                      initialize = <function 171>,
+                      update = <function 172>
+                    },
+                    __instanceDict = <49>{
+                      __index = <table 49>,
+                      __tostring = <function 2>,
+                      checkEndPassedWindow = <function 161>,
+                      checkEndTap = <function 162>,
+                      checkIfActive = <function 137>,
+                      checkPassedWindow = <function 138>,
+                      checkTap = <function 139>,
+                      checkTouchingPaddle = <function 140>,
+                      cleanup = <function 163>,
+                      draw = <function 164>,
+                      drawHold = <function 165>,
+                      drawSprite = <function 143>,
+                      drawTap = <function 144>,
+                      getPositions = <function 166>,
+                      getTapMult = <function 146>,
+                      inTimingWindow = <function 147>,
+                      initialize = <function 171>,
+                      isInstanceOf = <function 6>,
+                      makeParticles = <function 149>,
+                      onHit = <function 150>,
+                      onMiss = <function 151>,
+                      update = <function 172>,
+                      updateAngle = <function 153>,
+                      updateDuringHit = <function 169>,
+                      updateOrigin = <function 154>,
+                      updatePositions = <function 155>,
+                      updateProgress = <function 156>
+                    },
+                    name = "MineHold",
+                    static = <50>{
+                      <metatable> = {
+                        __index = <function 173>
+                      }
+                    },
+                    subclasses = {
+                      <metatable> = {
+                        __mode = "k"
+                      }
+                    },
+                    super = <table 46>,
+                    <metatable> = {
+                      __call = <function 19>,
+                      __index = <table 50>,
+                      __newindex = <function 20>,
+                      __tostring = <function 21>
+                    }
+                  }] = true,
+                  <metatable> = {
+                    __mode = "k"
+                  }
+                },
+                super = <table 41>,
+                <metatable> = {
+                  __call = <function 19>,
+                  __index = <table 48>,
+                  __newindex = <function 20>,
+                  __tostring = <function 21>
+                }
+              }] = true,
+              [{
+                __declaredMethods = {
+                  draw = <function 174>,
+                  initialize = <function 175>,
+                  makeParticles = <function 176>,
+                  onHit = <function 177>,
+                  update = <function 178>
+                },
+                __instanceDict = <51>{
+                  __index = <table 51>,
+                  __tostring = <function 2>,
+                  checkIfActive = <function 137>,
+                  checkPassedWindow = <function 138>,
+                  checkTap = <function 139>,
+                  checkTouchingPaddle = <function 140>,
+                  cleanup = <function 141>,
+                  draw = <function 174>,
+                  drawSprite = <function 143>,
+                  drawTap = <function 144>,
+                  getPositions = <function 145>,
+                  getTapMult = <function 146>,
+                  inTimingWindow = <function 147>,
+                  initialize = <function 175>,
+                  isInstanceOf = <function 6>,
+                  makeParticles = <function 176>,
+                  onHit = <function 177>,
+                  onMiss = <function 151>,
+                  update = <function 178>,
+                  updateAngle = <function 153>,
+                  updateOrigin = <function 154>,
+                  updatePositions = <function 155>,
+                  updateProgress = <function 156>
+                },
+                name = "ExtraTap",
+                static = <52>{
+                  <metatable> = {
+                    __index = <function 179>
+                  }
+                },
+                subclasses = {
+                  <metatable> = {
+                    __mode = "k"
+                  }
+                },
+                super = <table 41>,
+                <metatable> = {
+                  __call = <function 19>,
+                  __index = <table 52>,
+                  __newindex = <function 20>,
+                  __tostring = <function 21>
+                }
+              }] = true,
+              [{
+                __declaredMethods = {
+                  draw = <function 180>,
+                  drawTap = <function 181>,
+                  initialize = <function 182>,
+                  update = <function 183>
+                },
+                __instanceDict = <53>{
+                  __index = <table 53>,
+                  __tostring = <function 2>,
+                  checkIfActive = <function 137>,
+                  checkPassedWindow = <function 138>,
+                  checkTap = <function 139>,
+                  checkTouchingPaddle = <function 140>,
+                  cleanup = <function 141>,
+                  draw = <function 180>,
+                  drawSprite = <function 143>,
+                  drawTap = <function 181>,
+                  getPositions = <function 145>,
+                  getTapMult = <function 146>,
+                  inTimingWindow = <function 147>,
+                  initialize = <function 182>,
+                  isInstanceOf = <function 6>,
+                  makeParticles = <function 149>,
+                  onHit = <function 150>,
+                  onMiss = <function 151>,
+                  update = <function 183>,
+                  updateAngle = <function 153>,
+                  updateOrigin = <function 154>,
+                  updatePositions = <function 155>,
+                  updateProgress = <function 156>
+                },
+                name = "Side",
+                static = <54>{
+                  <metatable> = {
+                    __index = <function 184>
+                  }
+                },
+                subclasses = {
+                  <metatable> = {
+                    __mode = "k"
+                  }
+                },
+                super = <table 41>,
+                <metatable> = {
+                  __call = <function 19>,
+                  __index = <table 54>,
+                  __newindex = <function 20>,
+                  __tostring = <function 21>
+                }
+              }] = true,
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 43>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              addBoolean = <function 185>,
+              addCustom = <function 186>,
+              addEnum = <function 187>,
+              addNumber = <function 188>,
+              addOption = <function 189>,
+              addText = <function 190>,
+              calculateWidth = <function 191>,
+              defineSubmenu = <function 192>,
+              draw = <function 193>,
+              initialize = <function 194>,
+              leftRightSelectedText = <function 195>,
+              numberSelectedText = <function 196>,
+              setSelection = <function 197>,
+              setSubmenu = <function 198>,
+              update = <function 199>
+            },
+            __instanceDict = <55>{
+              __index = <table 55>,
+              __tostring = <function 2>,
+              addBoolean = <function 185>,
+              addCustom = <function 186>,
+              addEnum = <function 187>,
+              addNumber = <function 188>,
+              addOption = <function 189>,
+              addText = <function 190>,
+              calculateWidth = <function 191>,
+              defineSubmenu = <function 192>,
+              draw = <function 193>,
+              initialize = <function 194>,
+              isInstanceOf = <function 6>,
+              leftRightSelectedText = <function 195>,
+              numberSelectedText = <function 196>,
+              setSelection = <function 197>,
+              setSubmenu = <function 198>,
+              update = <function 199>
+            },
+            name = "OptionsList",
+            static = <56>{
+              <metatable> = {
+                __index = <function 200>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 56>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          [<table 3>] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 201>,
+              initialize = <function 202>,
+              update = <function 203>
+            },
+            __instanceDict = <57>{
+              __index = <table 57>,
+              __tostring = <function 2>,
+              draw = <function 201>,
+              initialize = <function 202>,
+              isInstanceOf = <function 6>,
+              update = <function 203>
+            },
+            name = "MonitorTheme",
+            static = <58>{
+              <metatable> = {
+                __index = <function 204>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 6>,
+            <metatable> = {
+              __call = <function 19>,
+              __index = <table 58>,
+              __newindex = <function 20>,
+              __tostring = <function 21>
+            }
+          }] = true,
+          <metatable> = {
+            __mode = "k"
+          }
+        },
+        <metatable> = {
+          __call = <function 19>,
+          __index = <table 8>,
+          __newindex = <function 20>,
+          __tostring = <function 21>
+        }
+      },
+      <metatable> = {
+        __call = <function 19>,
+        __index = <table 5>,
+        __newindex = <function 20>,
+        __tostring = <function 21>
+      }
+    },
+    delete = false,
+    lastFrame = <userdata 3>,
+    layer = 1,
+    skipRender = true,
+    skipUpdate = true,
+    songFinished = false,
+    upLayer = -9999,
+    x = 0,
+    y = 0,
+    <metatable> = <table 4>
+  },
+  goToResults = <function 205>,
+  hits = 0,
+  holdEntityDraw = true,
+  initFunc = <function 206>,
+  lastSigBeat = -8,
+  leave = <function 207>,
+  level = {
+    bpm = 84,
+    events = { {
+        angle = 360,
+        bpm = 84,
+        file = "song.ogg",
+        time = 0,
+        type = "play",
+        volume = 1
+      }, {
+        angle = 0,
+        time = 66,
+        type = "showResults"
+      }, {
+        angle = 22.5,
+        b = 112,
+        color = 7,
+        g = 157,
+        r = 26,
+        time = -4.125,
+        type = "setColor"
+      }, {
+        angle = 45,
+        drawLayer = "bg",
+        id = "spiral",
+        ox = 250,
+        oy = 250,
+        recolor = 7,
+        sprite = "spiral.png",
+        sx = 1.5,
+        sy = 1.5,
+        time = -4.125,
+        type = "deco"
+      }, {
+        angle = 337.5,
+        duration = 50000,
+        id = "spiral",
+        r = 5000000,
+        time = -3.875,
+        type = "deco"
+      }, {
+        angle = 0,
+        color = 6,
+        time = -3.875,
+        type = "setBgColor"
+      }, {
+        angle = 0,
+        b = 152,
+        color = 6,
+        g = 209,
+        r = 156,
+        time = -4.125,
+        type = "setColor"
+      }, {
+        angle = 45,
+        color = 0,
+        enable = true,
+        time = -3.875,
+        type = "outline"
+      }, {
+        angle = 337.5,
+        b = 169,
+        color = 0,
+        g = 216,
+        r = 119,
+        time = -4.125,
+        type = "setColor"
+      }, {
+        angle = 315,
+        b = 249,
+        color = 0,
+        duration = 1,
+        g = 218,
+        r = 112,
+        time = 31.25,
+        type = "setColor"
+      }, {
+        angle = 337.5,
+        b = 192,
+        color = 7,
+        duration = 1,
+        g = 109,
+        r = 59,
+        time = 31.25,
+        type = "setColor"
+      }, {
+        angle = 0,
+        b = 200,
+        color = 6,
+        duration = 1,
+        g = 182,
+        r = 117,
+        time = 31.25,
+        type = "setColor"
+      }, {
+        angle = 67.5,
+        b = 5,
+        color = 7,
+        duration = 0.75,
+        g = 165,
+        r = 201,
+        time = 33.625,
+        type = "setColor"
+      }, {
+        angle = 90,
+        b = 139,
+        color = 6,
+        duration = 0.75,
+        g = 222,
+        r = 254,
+        time = 33.625,
+        type = "setColor"
+      }, {
+        angle = 112.5,
+        b = 149,
+        color = 0,
+        duration = 0.75,
+        g = 252,
+        r = 252,
+        time = 33.625,
+        type = "setColor"
+      }, {
+        angle = 45,
+        b = 251,
+        color = 0,
+        duration = 0.75,
+        g = 186,
+        r = 243,
+        time = 35.625,
+        type = "setColor"
+      }, {
+        angle = 67.5,
+        b = 226,
+        color = 7,
+        duration = 0.75,
+        g = 101,
+        r = 226,
+        time = 35.625,
+        type = "setColor"
+      }, {
+        angle = 90,
+        b = 255,
+        color = 6,
+        duration = 0.75,
+        g = 196,
+        r = 250,
+        time = 35.625,
+        type = "setColor"
+      }, {
+        angle = 112.5,
+        b = 16,
+        color = 7,
+        duration = 0.75,
+        g = 189,
+        r = 29,
+        time = 37.875,
+        type = "setColor"
+      }, {
+        angle = 135,
+        b = 162,
+        color = 0,
+        duration = 0.75,
+        g = 249,
+        r = 190,
+        time = 37.875,
+        type = "setColor"
+      }, {
+        angle = 157.5,
+        b = 164,
+        color = 6,
+        duration = 0.75,
+        g = 239,
+        r = 182,
+        time = 37.875,
+        type = "setColor"
+      }, {
+        angle = 337.5,
+        b = 83,
+        color = 7,
+        duration = 0.75,
+        g = 83,
+        r = 222,
+        time = 39.625,
+        type = "setColor"
+      }, {
+        angle = 315,
+        b = 140,
+        color = 6,
+        duration = 0.75,
+        g = 140,
+        r = 244,
+        time = 39.625,
+        type = "setColor"
+      }, {
+        angle = 0,
+        b = 147,
+        color = 0,
+        duration = 0.75,
+        g = 147,
+        r = 255,
+        time = 39.625,
+        type = "setColor"
+      }, {
+        angle = 45,
+        b = 255,
+        color = 6,
+        duration = 0.75,
+        g = 170,
+        r = 202,
+        time = 41.625,
+        type = "setColor"
+      }, {
+        angle = 67.5,
+        b = 180,
+        color = 7,
+        duration = 0.75,
+        g = 73,
+        r = 140,
+        time = 41.625,
+        type = "setColor"
+      }, {
+        angle = 90,
+        b = 255,
+        color = 0,
+        duration = 0.75,
+        g = 181,
+        r = 220,
+        time = 41.625,
+        type = "setColor"
+      }, {
+        angle = 45,
+        color = 0,
+        time = 43.5,
+        type = "setColor"
+      }, {
+        angle = 67.5,
+        color = 0,
+        time = 43.5,
+        type = "setColor"
+      }, {
+        angle = 90,
+        color = 0,
+        time = 43.5,
+        type = "setColor"
+      }, {
+        angle = 67.5,
+        b = 100,
+        color = 7,
+        duration = 0.75,
+        g = 157,
+        r = 60,
+        time = 47.625,
+        type = "setColor"
+      }, {
+        angle = 90,
+        b = 200,
+        color = 0,
+        duration = 0.75,
+        g = 220,
+        r = 165,
+        time = 47.625,
+        type = "setColor"
+      }, {
+        angle = 112.5,
+        b = 176,
+        color = 6,
+        duration = 0.75,
+        g = 200,
+        r = 138,
+        time = 47.625,
+        type = "setColor"
+      }, {
+        angle = 45,
+        b = 235,
+        color = 0,
+        duration = 0.75,
+        g = 172,
+        r = 233,
+        time = 49.5,
+        type = "setColor"
+      }, {
+        angle = 67.5,
+        b = 171,
+        color = 7,
+        duration = 0.75,
+        g = 87,
+        r = 177,
+        time = 49.5,
+        type = "setColor"
+      }, {
+        angle = 90,
+        b = 199,
+        color = 6,
+        duration = 0.75,
+        g = 141,
+        r = 199,
+        time = 49.5,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 157,
+        color = 0,
+        duration = 0.75,
+        g = 207,
+        r = 210,
+        time = 51.625,
+        type = "setColor"
+      }, {
+        angle = 45,
+        b = 88,
+        color = 7,
+        duration = 0.75,
+        g = 179,
+        r = 179,
+        time = 51.625,
+        type = "setColor"
+      }, {
+        angle = 67.5,
+        b = 144,
+        color = 6,
+        duration = 0.75,
+        g = 193,
+        r = 196,
+        time = 51.625,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 0,
+        color = 7,
+        duration = 7.5,
+        g = 0,
+        r = 0,
+        time = 55.75,
+        type = "setColor"
+      }, {
+        angle = 45,
+        b = 0,
+        color = 0,
+        duration = 7.5,
+        g = 0,
+        r = 0,
+        time = 55.75,
+        type = "setColor"
+      }, {
+        angle = 360,
+        b = 0,
+        color = 6,
+        duration = 7.5,
+        g = 0,
+        r = 0,
+        time = 55.75,
+        type = "setColor"
+      }, {
+        angle = 0,
+        id = "tec",
+        recolor = 4,
+        sprite = "tec.png",
+        sx = 0.69999992847443,
+        sy = 0.69999992847443,
+        time = 64,
+        type = "deco",
+        x = 50,
+        y = 50
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        duration = 0,
+        g = 0,
+        r = 247,
+        time = 64,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 143,
+        time = 64.25,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 247,
+        time = 64.375,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 112,
+        time = 64.5,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 233,
+        color = 4,
+        g = 0,
+        r = 255,
+        time = 64.625,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 157,
+        time = 64.75,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 217,
+        time = 64.875,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 105,
+        time = 65,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 195,
+        time = 65.125,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 247,
+        color = 4,
+        g = 0,
+        r = 255,
+        time = 65.25,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 112,
+        time = 65.375,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 232,
+        time = 65.5,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 254,
+        color = 4,
+        g = 0,
+        r = 112,
+        time = 65.625,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 232,
+        time = 65.75,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 0,
+        r = 157,
+        time = 65.875,
+        type = "setColor"
+      }, {
+        angle = 22.5,
+        b = 255,
+        color = 4,
+        g = 10,
+        r = 248,
+        time = 66,
+        type = "setColor"
+      }, {
+        angle = 360,
+        time = 0.33333334326744,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 1.5,
+        type = "block"
+      }, {
+        angle = 0,
+        angle2 = 180,
+        duration = 0.66666668653488,
+        time = 4,
+        type = "hold"
+      }, {
+        angle = 180,
+        angle2 = 22.5,
+        duration = 1,
+        endTap = true,
+        startTap = true,
+        time = 4.6666665077209,
+        type = "hold"
+      }, {
+        angle = 22.5,
+        time = 5.5,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 7.5,
+        type = "block"
+      }, {
+        angle = 22.5,
+        angle2 = 180,
+        duration = 0.75,
+        time = 12,
+        type = "hold"
+      }, {
+        angle = 180,
+        angle2 = 90,
+        duration = 0.75,
+        endTap = true,
+        startTap = true,
+        time = 12.75,
+        type = "hold"
+      }, {
+        angle = 67.5,
+        tap = true,
+        time = 14,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 14.5,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 16.875,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 17.375,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 17.625,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 17.875,
+        type = "block"
+      }, {
+        angle = 67.5,
+        spinEase = "outQuad",
+        time = 18.375,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 18.875,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 19.375,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 21.875,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 21.375,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 23.875,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 24.125,
+        type = "block"
+      }, {
+        angle = 67.5,
+        spinEase = "inSine",
+        time = 24.375,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 24.625,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 24.875,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 25.125,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 26,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 26.625,
+        type = "block"
+      }, {
+        angle = 0,
+        tap = true,
+        time = 47.5,
+        type = "block"
+      }, {
+        angle = 0,
+        tap = true,
+        time = 48,
+        type = "block"
+      }, {
+        angle = 360,
+        tap = true,
+        time = 47,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 49,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 50,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 51,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 51.5,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 52,
+        type = "block"
+      }, {
+        angle = 360,
+        tap = true,
+        time = 56,
+        type = "block"
+      }, {
+        angle = 0,
+        tap = true,
+        time = 59.666667938232,
+        type = "block"
+      }, {
+        angle = 360,
+        tap = true,
+        time = 56.375,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 8.1666669845581,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 9.1666669845581,
+        type = "block"
+      }, {
+        angle = 337.5,
+        time = 0.5,
+        type = "block"
+      }, {
+        angle = 315,
+        time = 0.75,
+        type = "block"
+      }, {
+        angle = 292.5,
+        tap = true,
+        time = 1,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 1.75,
+        type = "block"
+      }, {
+        angle = 45,
+        time = 2,
+        type = "block"
+      }, {
+        angle = 270,
+        time = 3,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 8.4166669845581,
+        type = "block"
+      }, {
+        angle = 45,
+        time = 8.6666669845581,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 8.9166669845581,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 10.416666984558,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 10.666666984558,
+        type = "block"
+      }, {
+        angle = 315,
+        time = 3.5,
+        type = "block"
+      }, {
+        angle = 337.5,
+        time = 3.75,
+        type = "block"
+      }, {
+        angle = 180,
+        angle2 = 180,
+        duration = 3.9999988079071,
+        time = 0,
+        type = "mineHold"
+      }, {
+        angle = 22.5,
+        angle2 = -540,
+        duration = 1.8333337306976,
+        time = 14.625,
+        type = "mineHold"
+      }, {
+        angle = 247.5,
+        tap = true,
+        time = 22.583333969116,
+        type = "inverse"
+      }, {
+        angle = 11.25,
+        time = 33.083332061768,
+        type = "inverse"
+      }, {
+        angle = 11.25,
+        time = 33.75,
+        type = "inverse"
+      }, {
+        angle = 11.25,
+        time = 32.583332061768,
+        type = "inverse"
+      }, {
+        angle = 11.25,
+        time = 32,
+        type = "inverse"
+      }, {
+        angle = 0,
+        tap = true,
+        time = 33.75,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 35.583332061768,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 35.833332061768,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 37.916667938232,
+        type = "block"
+      }, {
+        angle = 33.75,
+        time = 39.75,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 45.833332061768,
+        type = "block"
+      }, {
+        angle = 33.75,
+        time = 38.75,
+        type = "inverse"
+      }, {
+        angle = 360,
+        time = 2.5,
+        type = "side"
+      }, {
+        angle = 270,
+        tap = true,
+        time = 6.6666665077209,
+        type = "side"
+      }, {
+        angle = 67.5,
+        time = 26.875,
+        type = "side"
+      }, {
+        angle = 292.5,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 303.75,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 315,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 326.25,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 337.5,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 281.25,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 270,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 258.75,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 247.5,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 236.25,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 225,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 213.75,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 202.5,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 191.25,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 180,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 168.75,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 157.5,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 146.25,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 135,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 123.75,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 112.5,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 101.25,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 90,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 78.75,
+        time = 7,
+        type = "mine"
+      }, {
+        angle = 337.5,
+        time = 6.75,
+        type = "mine"
+      }, {
+        angle = 0,
+        tap = true,
+        time = 61.25,
+        type = "block"
+      }, {
+        angle = 360,
+        tap = true,
+        time = 61.666667938232,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 63.833332061768,
+        type = "block"
+      }, {
+        angle = 337.5,
+        tap = true,
+        time = 10.875,
+        type = "side"
+      }, {
+        angle = 45,
+        time = 9.375,
+        type = "side"
+      }, {
+        angle = 337.5,
+        angle2 = 405,
+        duration = 1.75,
+        time = 32,
+        type = "hold"
+      }, {
+        angle = 247.5,
+        time = 34.333332061768,
+        type = "inverse"
+      }, {
+        angle = 45,
+        angle2 = -112.5,
+        duration = 0.58333343267441,
+        time = 33.75,
+        type = "hold"
+      }, {
+        angle = 247.5,
+        angle2 = 0,
+        duration = 1.2500001192093,
+        time = 34.333332061768,
+        type = "hold"
+      }, {
+        angle = 22.5,
+        time = 33.333332061768,
+        type = "inverse"
+      }, {
+        angle = 146.25,
+        time = 34.833332061768,
+        type = "inverse"
+      }, {
+        angle = 360,
+        angle2 = -360,
+        duration = 2.0833337306976,
+        endTap = true,
+        startTap = true,
+        time = 35.833332061768,
+        type = "hold"
+      }, {
+        angle = 326.25,
+        tap = true,
+        time = 38.333332061768,
+        type = "block"
+      }, {
+        angle = 33.75,
+        tap = true,
+        time = 38.75,
+        type = "block"
+      }, {
+        angle = 330,
+        tap = true,
+        time = 39.25,
+        type = "block"
+      }, {
+        angle = 0,
+        tap = true,
+        time = 39.541667938232,
+        type = "block"
+      }, {
+        angle = 0,
+        time = 35.583332061768,
+        type = "inverse"
+      }, {
+        angle = 101.25,
+        time = 35.083332061768,
+        type = "inverse"
+      }, {
+        angle = 123.75,
+        time = 36.5,
+        type = "inverse"
+      }, {
+        angle = 292.5,
+        time = 37.083332061768,
+        type = "inverse"
+      }, {
+        angle = 191.25,
+        time = 37.333332061768,
+        type = "inverse"
+      }, {
+        angle = 0,
+        time = 37.916667938232,
+        type = "inverse"
+      }, {
+        angle = 337.5,
+        time = 38.333332061768,
+        type = "inverse"
+      }, {
+        angle = 337.5,
+        time = 39.25,
+        type = "inverse"
+      }, {
+        angle = 0,
+        time = 39.541667938232,
+        type = "inverse"
+      }, {
+        angle = 0,
+        tap = true,
+        time = 32,
+        type = "block"
+      }, {
+        angle = 33.75,
+        angle2 = 292.5,
+        duration = 0.83333337306976,
+        time = 39.75,
+        type = "hold"
+      }, {
+        angle = 360,
+        time = 41.75,
+        type = "side"
+      }, {
+        angle = 270,
+        time = 42.25,
+        type = "side"
+      }, {
+        angle = 180,
+        time = 42.833332061768,
+        type = "side"
+      }, {
+        angle = 90,
+        time = 43.25,
+        type = "side"
+      }, {
+        angle = 360,
+        angle2 = 236.25,
+        duration = 1.3333334922791,
+        time = 43.916667938232,
+        type = "hold"
+      }, {
+        angle = 236.25,
+        angle2 = 0,
+        duration = 0.58333343267441,
+        time = 45.25,
+        type = "hold"
+      }, {
+        angle = 315,
+        tap = true,
+        time = 46.833332061768,
+        type = "block"
+      }, {
+        angle = 45,
+        tap = true,
+        time = 47.25,
+        type = "block"
+      }, {
+        angle = 315,
+        tap = true,
+        time = 47.75,
+        type = "block"
+      }, {
+        angle = 180,
+        time = 51.75,
+        type = "block"
+      }, {
+        angle = 67.5,
+        time = 19.9375,
+        type = "side"
+      }, {
+        angle = -101.25,
+        angle2 = 371.25,
+        duration = 1.1666667461395,
+        time = 20,
+        type = "mineHold"
+      }, {
+        angle = 157.5,
+        angle2 = 697.5,
+        duration = 1.6875,
+        time = 22,
+        type = "mineHold"
+      }, {
+        angle = 22.5,
+        angle2 = 776.25,
+        duration = 1.8125,
+        time = 27.25,
+        type = "mineHold"
+      }, {
+        angle = 56.25,
+        tap = true,
+        time = 27.625,
+        type = "side"
+      }, {
+        angle = 112.5,
+        tap = true,
+        time = 27.875,
+        type = "side"
+      }, {
+        angle = 330,
+        angle2 = 302.5,
+        duration = 0.25,
+        time = 41.75,
+        type = "mineHold"
+      }, {
+        angle = 0,
+        angle2 = 360,
+        duration = 0.9375,
+        time = 53.875,
+        type = "hold"
+      }, {
+        angle = 0,
+        angle2 = -360,
+        duration = 1.1875,
+        time = 54.8125,
+        type = "hold"
+      }, {
+        angle = 33.75,
+        time = 39.75,
+        type = "inverse"
+      }, {
+        angle = 292.5,
+        time = 40.583332061768,
+        type = "inverse"
+      }, {
+        angle = 0,
+        angle2 = 360,
+        duration = 1,
+        time = 49,
+        type = "hold"
+      }, {
+        angle = 326.25,
+        tap = true,
+        time = 56.875,
+        type = "block"
+      }, {
+        angle = 225,
+        tap = true,
+        time = 58.083332061768,
+        type = "block"
+      }, {
+        angle = 0,
+        angle2 = 348.75,
+        duration = 1.1666667461395,
+        time = 59.666667938232,
+        type = "hold"
+      }, {
+        angle = 0,
+        angle2 = -360,
+        duration = 1.8333336114883,
+        time = 61.666667938232,
+        type = "hold"
+      }, {
+        angle = 0,
+        angle2 = -360,
+        duration = 1,
+        time = 48,
+        type = "hold"
+      }, {
+        angle = 0,
+        angle2 = 360,
+        duration = 1,
+        time = 50,
+        type = "hold"
+      }, {
+        angle = 360,
+        angle2 = -360,
+        duration = 1.8958337306976,
+        time = 52,
+        type = "hold"
+      }, {
+        angle = 225,
+        angle2 = 405,
+        duration = 1.125,
+        time = 58.0625,
+        type = "hold"
+      }, {
+        angle = 45,
+        angle2 = 0,
+        duration = 0.5,
+        startTap = true,
+        time = 59.1875,
+        type = "hold"
+      }, {
+        angle = 303.75,
+        tap = true,
+        time = 58.5625,
+        type = "block"
+      }, {
+        angle = 326.25,
+        angle2 = -135,
+        duration = 1.1875,
+        time = 56.875,
+        type = "hold"
+      }, {
+        angle = 180,
+        tap = true,
+        time = 57.333332061768,
+        type = "block"
+      }, {
+        angle = 45,
+        tap = true,
+        time = 57.625,
+        type = "block"
+      }, {
+        angle = 67.5,
+        angle2 = 427.5,
+        duration = 0.5,
+        endTap = true,
+        time = 17.875,
+        type = "hold"
+      }, {
+        angle = 67.5,
+        angle2 = 78.75,
+        duration = 0.6875,
+        time = 23.8125,
+        type = "hold"
+      }, {
+        angle = 78.75,
+        angle2 = 67.5,
+        duration = 0.625,
+        time = 24.5,
+        type = "hold"
+      }, {
+        angle = 56.25,
+        angle2 = -675,
+        duration = 2.375,
+        time = 29.0625,
+        type = "mineHold"
+      }, {
+        angle = 326.25,
+        angle2 = 67.5,
+        duration = 1,
+        time = 35.125,
+        type = "mineHold"
+      }, {
+        angle = 348.75,
+        angle2 = -11.25,
+        duration = 1,
+        time = 36.375,
+        type = "mineHold"
+      }, {
+        angle = 33.75,
+        angle2 = 292.5,
+        duration = 0.75,
+        time = 40.375,
+        type = "mineHold"
+      }, {
+        angle = 0,
+        angle2 = -112.5,
+        duration = 1.0625,
+        time = 44.625,
+        type = "mineHold"
+      }, {
+        angle = 247.5,
+        angle2 = 22.5,
+        duration = 0.875,
+        time = 45.6875,
+        type = "mineHold"
+      }, {
+        angle = 135,
+        angle2 = 56.25,
+        duration = 0,
+        time = 51.9375,
+        type = "mineHold"
+      }, {
+        angle = 213.75,
+        time = 48.4375,
+        type = "inverse"
+      }, {
+        angle = 78.75,
+        time = 49.25,
+        type = "inverse"
+      }, {
+        angle = 180,
+        time = 49.5,
+        type = "inverse"
+      }, {
+        angle = 157.5,
+        time = 50.4375,
+        type = "inverse"
+      }, {
+        angle = 247.5,
+        time = 50.6875,
+        type = "inverse"
+      }, {
+        angle = 202.5,
+        time = 52.4375,
+        type = "inverse"
+      }, {
+        angle = 360,
+        time = 52.9375,
+        type = "inverse"
+      }, {
+        angle = 180,
+        time = 53.4375,
+        type = "inverse"
+      }, {
+        angle = 348.75,
+        angle2 = 270,
+        duration = 0.1875,
+        time = 1.875,
+        type = "mineHold"
+      }, {
+        angle = 213.75,
+        angle2 = 213.75,
+        duration = 4.2499995231628,
+        time = 8.375,
+        type = "mineHold"
+      }, {
+        angle = 22.5,
+        angle2 = -225,
+        duration = 0,
+        time = 24.5,
+        type = "mineHold"
+      }, {
+        angle = 22.5,
+        time = 9.9166669845581,
+        type = "block"
+      }, {
+        angle = 292.5,
+        time = 15.5,
+        type = "side"
+      }, {
+        angle = 67.5,
+        time = 16.625,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 5.8333334922791,
+        type = "block"
+      }, {
+        angle = 22.5,
+        time = 11.333333015442,
+        type = "block"
+      }, {
+        angle = 112.5,
+        time = 16.125,
+        type = "block"
+      }, {
+        angle = 90,
+        time = 16.375,
+        type = "block"
+      }, {
+        angle = 157.5,
+        time = 15.875,
+        type = "side"
+      } },
+    metadata = {
+      artist = "Artist",
+      artistLink = "",
+      bg = false,
+      charter = "Charter",
+      description = "Wow! It's a level!",
+      difficulty = 0,
+      songName = "Song name"
+    },
+    properties = {
+      formatversion = 12,
+      offset = 8,
+      speed = 70,
+      startBeat = 0
+    }
+  },
+  maxHits = 225,
+  mineHits = {},
+  misses = 0,
+  name = "Game",
+  noteRadius = 9,
+  offset = 8,
+  p = {
+    angle = 9.9058055415833,
+    angleDelta = 1.4210854715202e-14,
+    anglePrevFrame = 9.9058055415833,
+    bobI = 4.4879943600001,
+    bodyPulse = 0,
+    bodyRadius = 20,
+    cEmotion = "idle",
+    cMode = true,
+    circleX = 0,
+    circleY = 0,
+    class = <table 27>,
+    cumulativeAngle = 369.90580554158,
+    delete = false,
+    drawScale = 1,
+    emoTimer = -149.599812,
+    extend = 0,
+    feedbackAmplitude = 2.5,
+    feedbackDuration = 4,
+    feedbackEase = "outQuad",
+    feedbackOffset = 0,
+    forceSprite = "",
+    layer = 0,
+    lineWidth = 2,
+    lookRadius = 6,
+    lookYOffset = 0,
+    maxBodyPulse = 0.2,
+    ouchTime = 15,
+    paddleCount = 1,
+    paddleDistance = 31,
+    paddles = { {
+        baseAngle = 0,
+        enabled = true,
+        handleSize = 10,
+        paddleID = 0,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 1,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 2,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 3,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 4,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 5,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 6,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 7,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      } },
+    radius = 256,
+    snapX = 0,
+    snapY = 0,
+    spr = {
+      [":3"] = <userdata 4>,
+      angry = <userdata 5>,
+      happy = <userdata 6>,
+      idle = <userdata 7>,
+      miss = <userdata 8>
+    },
+    upLayer = 0,
+    x = 300,
+    y = 180,
+    <metatable> = <table 28>
+  },
+  playEvents = { {
+      angle = 360,
+      bpm = 84,
+      file = "song.ogg",
+      play_onLoad = true,
+      time = 0,
+      type = "play",
+      volume = 1
+    }, {
+      angle = 0,
+      time = 66,
+      type = "showResults"
+    }, {
+      angle = 22.5,
+      b = 112,
+      color = 7,
+      g = 157,
+      play_onLoad = true,
+      r = 26,
+      time = -4.125,
+      type = "setColor"
+    }, {
+      angle = 45,
+      drawLayer = "bg",
+      id = "spiral",
+      ox = 250,
+      oy = 250,
+      play_onLoad = true,
+      recolor = 7,
+      sprite = "spiral.png",
+      sx = 1.5,
+      sy = 1.5,
+      time = -4.125,
+      type = "deco"
+    }, {
+      angle = 337.5,
+      duration = 50000,
+      id = "spiral",
+      play_onLoad = true,
+      r = 5000000,
+      time = -3.875,
+      type = "deco"
+    }, {
+      angle = 0,
+      color = 6,
+      time = -3.875,
+      type = "setBgColor"
+    }, {
+      angle = 0,
+      b = 152,
+      color = 6,
+      g = 209,
+      play_onLoad = true,
+      r = 156,
+      time = -4.125,
+      type = "setColor"
+    }, {
+      angle = 45,
+      color = 0,
+      enable = true,
+      time = -3.875,
+      type = "outline"
+    }, {
+      angle = 337.5,
+      b = 169,
+      color = 0,
+      g = 216,
+      play_onLoad = true,
+      r = 119,
+      time = -4.125,
+      type = "setColor"
+    }, {
+      angle = 315,
+      b = 249,
+      color = 0,
+      duration = 1,
+      g = 218,
+      play_onLoad = true,
+      r = 112,
+      time = 31.25,
+      type = "setColor"
+    }, {
+      angle = 337.5,
+      b = 192,
+      color = 7,
+      duration = 1,
+      g = 109,
+      play_onLoad = true,
+      r = 59,
+      time = 31.25,
+      type = "setColor"
+    }, {
+      angle = 0,
+      b = 200,
+      color = 6,
+      duration = 1,
+      g = 182,
+      play_onLoad = true,
+      r = 117,
+      time = 31.25,
+      type = "setColor"
+    }, {
+      angle = 67.5,
+      b = 5,
+      color = 7,
+      duration = 0.75,
+      g = 165,
+      play_onLoad = true,
+      r = 201,
+      time = 33.625,
+      type = "setColor"
+    }, {
+      angle = 90,
+      b = 139,
+      color = 6,
+      duration = 0.75,
+      g = 222,
+      play_onLoad = true,
+      r = 254,
+      time = 33.625,
+      type = "setColor"
+    }, {
+      angle = 112.5,
+      b = 149,
+      color = 0,
+      duration = 0.75,
+      g = 252,
+      play_onLoad = true,
+      r = 252,
+      time = 33.625,
+      type = "setColor"
+    }, {
+      angle = 45,
+      b = 251,
+      color = 0,
+      duration = 0.75,
+      g = 186,
+      play_onLoad = true,
+      r = 243,
+      time = 35.625,
+      type = "setColor"
+    }, {
+      angle = 67.5,
+      b = 226,
+      color = 7,
+      duration = 0.75,
+      g = 101,
+      play_onLoad = true,
+      r = 226,
+      time = 35.625,
+      type = "setColor"
+    }, {
+      angle = 90,
+      b = 255,
+      color = 6,
+      duration = 0.75,
+      g = 196,
+      play_onLoad = true,
+      r = 250,
+      time = 35.625,
+      type = "setColor"
+    }, {
+      angle = 112.5,
+      b = 16,
+      color = 7,
+      duration = 0.75,
+      g = 189,
+      play_onLoad = true,
+      r = 29,
+      time = 37.875,
+      type = "setColor"
+    }, {
+      angle = 135,
+      b = 162,
+      color = 0,
+      duration = 0.75,
+      g = 249,
+      play_onLoad = true,
+      r = 190,
+      time = 37.875,
+      type = "setColor"
+    }, {
+      angle = 157.5,
+      b = 164,
+      color = 6,
+      duration = 0.75,
+      g = 239,
+      play_onLoad = true,
+      r = 182,
+      time = 37.875,
+      type = "setColor"
+    }, {
+      angle = 337.5,
+      b = 83,
+      color = 7,
+      duration = 0.75,
+      g = 83,
+      play_onLoad = true,
+      r = 222,
+      time = 39.625,
+      type = "setColor"
+    }, {
+      angle = 315,
+      b = 140,
+      color = 6,
+      duration = 0.75,
+      g = 140,
+      play_onLoad = true,
+      r = 244,
+      time = 39.625,
+      type = "setColor"
+    }, {
+      angle = 0,
+      b = 147,
+      color = 0,
+      duration = 0.75,
+      g = 147,
+      play_onLoad = true,
+      r = 255,
+      time = 39.625,
+      type = "setColor"
+    }, {
+      angle = 45,
+      b = 255,
+      color = 6,
+      duration = 0.75,
+      g = 170,
+      play_onLoad = true,
+      r = 202,
+      time = 41.625,
+      type = "setColor"
+    }, {
+      angle = 67.5,
+      b = 180,
+      color = 7,
+      duration = 0.75,
+      g = 73,
+      play_onLoad = true,
+      r = 140,
+      time = 41.625,
+      type = "setColor"
+    }, {
+      angle = 90,
+      b = 255,
+      color = 0,
+      duration = 0.75,
+      g = 181,
+      play_onLoad = true,
+      r = 220,
+      time = 41.625,
+      type = "setColor"
+    }, {
+      angle = 45,
+      color = 0,
+      play_onLoad = true,
+      time = 43.5,
+      type = "setColor"
+    }, {
+      angle = 67.5,
+      color = 0,
+      play_onLoad = true,
+      time = 43.5,
+      type = "setColor"
+    }, {
+      angle = 90,
+      color = 0,
+      play_onLoad = true,
+      time = 43.5,
+      type = "setColor"
+    }, {
+      angle = 67.5,
+      b = 100,
+      color = 7,
+      duration = 0.75,
+      g = 157,
+      play_onLoad = true,
+      r = 60,
+      time = 47.625,
+      type = "setColor"
+    }, {
+      angle = 90,
+      b = 200,
+      color = 0,
+      duration = 0.75,
+      g = 220,
+      play_onLoad = true,
+      r = 165,
+      time = 47.625,
+      type = "setColor"
+    }, {
+      angle = 112.5,
+      b = 176,
+      color = 6,
+      duration = 0.75,
+      g = 200,
+      play_onLoad = true,
+      r = 138,
+      time = 47.625,
+      type = "setColor"
+    }, {
+      angle = 45,
+      b = 235,
+      color = 0,
+      duration = 0.75,
+      g = 172,
+      play_onLoad = true,
+      r = 233,
+      time = 49.5,
+      type = "setColor"
+    }, {
+      angle = 67.5,
+      b = 171,
+      color = 7,
+      duration = 0.75,
+      g = 87,
+      play_onLoad = true,
+      r = 177,
+      time = 49.5,
+      type = "setColor"
+    }, {
+      angle = 90,
+      b = 199,
+      color = 6,
+      duration = 0.75,
+      g = 141,
+      play_onLoad = true,
+      r = 199,
+      time = 49.5,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 157,
+      color = 0,
+      duration = 0.75,
+      g = 207,
+      play_onLoad = true,
+      r = 210,
+      time = 51.625,
+      type = "setColor"
+    }, {
+      angle = 45,
+      b = 88,
+      color = 7,
+      duration = 0.75,
+      g = 179,
+      play_onLoad = true,
+      r = 179,
+      time = 51.625,
+      type = "setColor"
+    }, {
+      angle = 67.5,
+      b = 144,
+      color = 6,
+      duration = 0.75,
+      g = 193,
+      play_onLoad = true,
+      r = 196,
+      time = 51.625,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 0,
+      color = 7,
+      duration = 7.5,
+      g = 0,
+      play_onLoad = true,
+      r = 0,
+      time = 55.75,
+      type = "setColor"
+    }, {
+      angle = 45,
+      b = 0,
+      color = 0,
+      duration = 7.5,
+      g = 0,
+      play_onLoad = true,
+      r = 0,
+      time = 55.75,
+      type = "setColor"
+    }, {
+      angle = 360,
+      b = 0,
+      color = 6,
+      duration = 7.5,
+      g = 0,
+      play_onLoad = true,
+      r = 0,
+      time = 55.75,
+      type = "setColor"
+    }, {
+      angle = 0,
+      id = "tec",
+      play_onLoad = true,
+      recolor = 4,
+      sprite = "tec.png",
+      sx = 0.69999992847443,
+      sy = 0.69999992847443,
+      time = 64,
+      type = "deco",
+      x = 50,
+      y = 50
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      duration = 0,
+      g = 0,
+      play_onLoad = true,
+      r = 247,
+      time = 64,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 143,
+      time = 64.25,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 247,
+      time = 64.375,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 112,
+      time = 64.5,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 233,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 255,
+      time = 64.625,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 157,
+      time = 64.75,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 217,
+      time = 64.875,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 105,
+      time = 65,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 195,
+      time = 65.125,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 247,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 255,
+      time = 65.25,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 112,
+      time = 65.375,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 232,
+      time = 65.5,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 254,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 112,
+      time = 65.625,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 232,
+      time = 65.75,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 0,
+      play_onLoad = true,
+      r = 157,
+      time = 65.875,
+      type = "setColor"
+    }, {
+      angle = 22.5,
+      b = 255,
+      color = 4,
+      g = 10,
+      play_onLoad = true,
+      r = 248,
+      time = 66,
+      type = "setColor"
+    }, {
+      angle = 360,
+      play_onOffset = true,
+      time = 0.33333334326744,
+      type = "block"
+    }, {
+      angle = 0,
+      play_onOffset = true,
+      time = 1.5,
+      type = "block"
+    }, {
+      angle = 0,
+      angle2 = 180,
+      duration = 0.66666668653488,
+      time = 4,
+      type = "hold"
+    }, {
+      angle = 180,
+      angle2 = 22.5,
+      duration = 1,
+      endTap = true,
+      startTap = true,
+      time = 4.6666665077209,
+      type = "hold"
+    }, {
+      angle = 22.5,
+      time = 5.5,
+      type = "block"
+    }, {
+      angle = 22.5,
+      time = 7.5,
+      type = "block"
+    }, {
+      angle = 22.5,
+      angle2 = 180,
+      duration = 0.75,
+      time = 12,
+      type = "hold"
+    }, {
+      angle = 180,
+      angle2 = 90,
+      duration = 0.75,
+      endTap = true,
+      startTap = true,
+      time = 12.75,
+      type = "hold"
+    }, {
+      angle = 67.5,
+      tap = true,
+      time = 14,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 14.5,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 16.875,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 17.375,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 17.625,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 17.875,
+      type = "block"
+    }, {
+      angle = 67.5,
+      spinEase = "outQuad",
+      time = 18.375,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 18.875,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 19.375,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 21.875,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 21.375,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 23.875,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 24.125,
+      type = "block"
+    }, {
+      angle = 67.5,
+      spinEase = "inSine",
+      time = 24.375,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 24.625,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 24.875,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 25.125,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 26,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 26.625,
+      type = "block"
+    }, {
+      angle = 0,
+      tap = true,
+      time = 47.5,
+      type = "block"
+    }, {
+      angle = 0,
+      tap = true,
+      time = 48,
+      type = "block"
+    }, {
+      angle = 360,
+      tap = true,
+      time = 47,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 49,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 50,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 51,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 51.5,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 52,
+      type = "block"
+    }, {
+      angle = 360,
+      tap = true,
+      time = 56,
+      type = "block"
+    }, {
+      angle = 0,
+      tap = true,
+      time = 59.666667938232,
+      type = "block"
+    }, {
+      angle = 360,
+      tap = true,
+      time = 56.375,
+      type = "block"
+    }, {
+      angle = 22.5,
+      time = 8.1666669845581,
+      type = "block"
+    }, {
+      angle = 22.5,
+      time = 9.1666669845581,
+      type = "block"
+    }, {
+      angle = 337.5,
+      play_onOffset = true,
+      time = 0.5,
+      type = "block"
+    }, {
+      angle = 315,
+      play_onOffset = true,
+      time = 0.75,
+      type = "block"
+    }, {
+      angle = 292.5,
+      play_onOffset = true,
+      tap = true,
+      time = 1,
+      type = "block"
+    }, {
+      angle = 22.5,
+      play_onOffset = true,
+      time = 1.75,
+      type = "block"
+    }, {
+      angle = 45,
+      play_onOffset = true,
+      time = 2,
+      type = "block"
+    }, {
+      angle = 270,
+      play_onOffset = true,
+      time = 3,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 8.4166669845581,
+      type = "block"
+    }, {
+      angle = 45,
+      time = 8.6666669845581,
+      type = "block"
+    }, {
+      angle = 22.5,
+      time = 8.9166669845581,
+      type = "block"
+    }, {
+      angle = 22.5,
+      time = 10.416666984558,
+      type = "block"
+    }, {
+      angle = 22.5,
+      time = 10.666666984558,
+      type = "block"
+    }, {
+      angle = 315,
+      play_onOffset = true,
+      time = 3.5,
+      type = "block"
+    }, {
+      angle = 337.5,
+      play_onOffset = true,
+      time = 3.75,
+      type = "block"
+    }, {
+      angle = 180,
+      angle2 = 180,
+      duration = 3.9999988079071,
+      play_onOffset = true,
+      time = 0,
+      type = "mineHold"
+    }, {
+      angle = 22.5,
+      angle2 = -540,
+      duration = 1.8333337306976,
+      time = 14.625,
+      type = "mineHold"
+    }, {
+      angle = 247.5,
+      tap = true,
+      time = 22.583333969116,
+      type = "inverse"
+    }, {
+      angle = 11.25,
+      time = 33.083332061768,
+      type = "inverse"
+    }, {
+      angle = 11.25,
+      time = 33.75,
+      type = "inverse"
+    }, {
+      angle = 11.25,
+      time = 32.583332061768,
+      type = "inverse"
+    }, {
+      angle = 11.25,
+      time = 32,
+      type = "inverse"
+    }, {
+      angle = 0,
+      tap = true,
+      time = 33.75,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 35.583332061768,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 35.833332061768,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 37.916667938232,
+      type = "block"
+    }, {
+      angle = 33.75,
+      time = 39.75,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 45.833332061768,
+      type = "block"
+    }, {
+      angle = 33.75,
+      time = 38.75,
+      type = "inverse"
+    }, {
+      angle = 360,
+      play_onOffset = true,
+      time = 2.5,
+      type = "side"
+    }, {
+      angle = 270,
+      tap = true,
+      time = 6.6666665077209,
+      type = "side"
+    }, {
+      angle = 67.5,
+      time = 26.875,
+      type = "side"
+    }, {
+      angle = 292.5,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 303.75,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 315,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 326.25,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 337.5,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 281.25,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 270,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 258.75,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 247.5,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 236.25,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 225,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 213.75,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 202.5,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 191.25,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 180,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 168.75,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 157.5,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 146.25,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 135,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 123.75,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 112.5,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 101.25,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 90,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 78.75,
+      time = 7,
+      type = "mine"
+    }, {
+      angle = 337.5,
+      time = 6.75,
+      type = "mine"
+    }, {
+      angle = 0,
+      tap = true,
+      time = 61.25,
+      type = "block"
+    }, {
+      angle = 360,
+      tap = true,
+      time = 61.666667938232,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 63.833332061768,
+      type = "block"
+    }, {
+      angle = 337.5,
+      tap = true,
+      time = 10.875,
+      type = "side"
+    }, {
+      angle = 45,
+      time = 9.375,
+      type = "side"
+    }, {
+      angle = 337.5,
+      angle2 = 405,
+      duration = 1.75,
+      time = 32,
+      type = "hold"
+    }, {
+      angle = 247.5,
+      time = 34.333332061768,
+      type = "inverse"
+    }, {
+      angle = 45,
+      angle2 = -112.5,
+      duration = 0.58333343267441,
+      time = 33.75,
+      type = "hold"
+    }, {
+      angle = 247.5,
+      angle2 = 0,
+      duration = 1.2500001192093,
+      time = 34.333332061768,
+      type = "hold"
+    }, {
+      angle = 22.5,
+      time = 33.333332061768,
+      type = "inverse"
+    }, {
+      angle = 146.25,
+      time = 34.833332061768,
+      type = "inverse"
+    }, {
+      angle = 360,
+      angle2 = -360,
+      duration = 2.0833337306976,
+      endTap = true,
+      startTap = true,
+      time = 35.833332061768,
+      type = "hold"
+    }, {
+      angle = 326.25,
+      tap = true,
+      time = 38.333332061768,
+      type = "block"
+    }, {
+      angle = 33.75,
+      tap = true,
+      time = 38.75,
+      type = "block"
+    }, {
+      angle = 330,
+      tap = true,
+      time = 39.25,
+      type = "block"
+    }, {
+      angle = 0,
+      tap = true,
+      time = 39.541667938232,
+      type = "block"
+    }, {
+      angle = 0,
+      time = 35.583332061768,
+      type = "inverse"
+    }, {
+      angle = 101.25,
+      time = 35.083332061768,
+      type = "inverse"
+    }, {
+      angle = 123.75,
+      time = 36.5,
+      type = "inverse"
+    }, {
+      angle = 292.5,
+      time = 37.083332061768,
+      type = "inverse"
+    }, {
+      angle = 191.25,
+      time = 37.333332061768,
+      type = "inverse"
+    }, {
+      angle = 0,
+      time = 37.916667938232,
+      type = "inverse"
+    }, {
+      angle = 337.5,
+      time = 38.333332061768,
+      type = "inverse"
+    }, {
+      angle = 337.5,
+      time = 39.25,
+      type = "inverse"
+    }, {
+      angle = 0,
+      time = 39.541667938232,
+      type = "inverse"
+    }, {
+      angle = 0,
+      tap = true,
+      time = 32,
+      type = "block"
+    }, {
+      angle = 33.75,
+      angle2 = 292.5,
+      duration = 0.83333337306976,
+      time = 39.75,
+      type = "hold"
+    }, {
+      angle = 360,
+      time = 41.75,
+      type = "side"
+    }, {
+      angle = 270,
+      time = 42.25,
+      type = "side"
+    }, {
+      angle = 180,
+      time = 42.833332061768,
+      type = "side"
+    }, {
+      angle = 90,
+      time = 43.25,
+      type = "side"
+    }, {
+      angle = 360,
+      angle2 = 236.25,
+      duration = 1.3333334922791,
+      time = 43.916667938232,
+      type = "hold"
+    }, {
+      angle = 236.25,
+      angle2 = 0,
+      duration = 0.58333343267441,
+      time = 45.25,
+      type = "hold"
+    }, {
+      angle = 315,
+      tap = true,
+      time = 46.833332061768,
+      type = "block"
+    }, {
+      angle = 45,
+      tap = true,
+      time = 47.25,
+      type = "block"
+    }, {
+      angle = 315,
+      tap = true,
+      time = 47.75,
+      type = "block"
+    }, {
+      angle = 180,
+      time = 51.75,
+      type = "block"
+    }, {
+      angle = 67.5,
+      time = 19.9375,
+      type = "side"
+    }, {
+      angle = -101.25,
+      angle2 = 371.25,
+      duration = 1.1666667461395,
+      time = 20,
+      type = "mineHold"
+    }, {
+      angle = 157.5,
+      angle2 = 697.5,
+      duration = 1.6875,
+      time = 22,
+      type = "mineHold"
+    }, {
+      angle = 22.5,
+      angle2 = 776.25,
+      duration = 1.8125,
+      time = 27.25,
+      type = "mineHold"
+    }, {
+      angle = 56.25,
+      tap = true,
+      time = 27.625,
+      type = "side"
+    }, {
+      angle = 112.5,
+      tap = true,
+      time = 27.875,
+      type = "side"
+    }, {
+      angle = 330,
+      angle2 = 302.5,
+      duration = 0.25,
+      time = 41.75,
+      type = "mineHold"
+    }, {
+      angle = 0,
+      angle2 = 360,
+      duration = 0.9375,
+      time = 53.875,
+      type = "hold"
+    }, {
+      angle = 0,
+      angle2 = -360,
+      duration = 1.1875,
+      time = 54.8125,
+      type = "hold"
+    }, {
+      angle = 33.75,
+      time = 39.75,
+      type = "inverse"
+    }, {
+      angle = 292.5,
+      time = 40.583332061768,
+      type = "inverse"
+    }, {
+      angle = 0,
+      angle2 = 360,
+      duration = 1,
+      time = 49,
+      type = "hold"
+    }, {
+      angle = 326.25,
+      tap = true,
+      time = 56.875,
+      type = "block"
+    }, {
+      angle = 225,
+      tap = true,
+      time = 58.083332061768,
+      type = "block"
+    }, {
+      angle = 0,
+      angle2 = 348.75,
+      duration = 1.1666667461395,
+      time = 59.666667938232,
+      type = "hold"
+    }, {
+      angle = 0,
+      angle2 = -360,
+      duration = 1.8333336114883,
+      time = 61.666667938232,
+      type = "hold"
+    }, {
+      angle = 0,
+      angle2 = -360,
+      duration = 1,
+      time = 48,
+      type = "hold"
+    }, {
+      angle = 0,
+      angle2 = 360,
+      duration = 1,
+      time = 50,
+      type = "hold"
+    }, {
+      angle = 360,
+      angle2 = -360,
+      duration = 1.8958337306976,
+      time = 52,
+      type = "hold"
+    }, {
+      angle = 225,
+      angle2 = 405,
+      duration = 1.125,
+      time = 58.0625,
+      type = "hold"
+    }, {
+      angle = 45,
+      angle2 = 0,
+      duration = 0.5,
+      startTap = true,
+      time = 59.1875,
+      type = "hold"
+    }, {
+      angle = 303.75,
+      tap = true,
+      time = 58.5625,
+      type = "block"
+    }, {
+      angle = 326.25,
+      angle2 = -135,
+      duration = 1.1875,
+      time = 56.875,
+      type = "hold"
+    }, {
+      angle = 180,
+      tap = true,
+      time = 57.333332061768,
+      type = "block"
+    }, {
+      angle = 45,
+      tap = true,
+      time = 57.625,
+      type = "block"
+    }, {
+      angle = 67.5,
+      angle2 = 427.5,
+      duration = 0.5,
+      endTap = true,
+      time = 17.875,
+      type = "hold"
+    }, {
+      angle = 67.5,
+      angle2 = 78.75,
+      duration = 0.6875,
+      time = 23.8125,
+      type = "hold"
+    }, {
+      angle = 78.75,
+      angle2 = 67.5,
+      duration = 0.625,
+      time = 24.5,
+      type = "hold"
+    }, {
+      angle = 56.25,
+      angle2 = -675,
+      duration = 2.375,
+      time = 29.0625,
+      type = "mineHold"
+    }, {
+      angle = 326.25,
+      angle2 = 67.5,
+      duration = 1,
+      time = 35.125,
+      type = "mineHold"
+    }, {
+      angle = 348.75,
+      angle2 = -11.25,
+      duration = 1,
+      time = 36.375,
+      type = "mineHold"
+    }, {
+      angle = 33.75,
+      angle2 = 292.5,
+      duration = 0.75,
+      time = 40.375,
+      type = "mineHold"
+    }, {
+      angle = 0,
+      angle2 = -112.5,
+      duration = 1.0625,
+      time = 44.625,
+      type = "mineHold"
+    }, {
+      angle = 247.5,
+      angle2 = 22.5,
+      duration = 0.875,
+      time = 45.6875,
+      type = "mineHold"
+    }, {
+      angle = 135,
+      angle2 = 56.25,
+      duration = 0,
+      time = 51.9375,
+      type = "mineHold"
+    }, {
+      angle = 213.75,
+      time = 48.4375,
+      type = "inverse"
+    }, {
+      angle = 78.75,
+      time = 49.25,
+      type = "inverse"
+    }, {
+      angle = 180,
+      time = 49.5,
+      type = "inverse"
+    }, {
+      angle = 157.5,
+      time = 50.4375,
+      type = "inverse"
+    }, {
+      angle = 247.5,
+      time = 50.6875,
+      type = "inverse"
+    }, {
+      angle = 202.5,
+      time = 52.4375,
+      type = "inverse"
+    }, {
+      angle = 360,
+      time = 52.9375,
+      type = "inverse"
+    }, {
+      angle = 180,
+      time = 53.4375,
+      type = "inverse"
+    }, {
+      angle = 348.75,
+      angle2 = 270,
+      duration = 0.1875,
+      play_onOffset = true,
+      time = 1.875,
+      type = "mineHold"
+    }, {
+      angle = 213.75,
+      angle2 = 213.75,
+      duration = 4.2499995231628,
+      time = 8.375,
+      type = "mineHold"
+    }, {
+      angle = 22.5,
+      angle2 = -225,
+      duration = 0,
+      time = 24.5,
+      type = "mineHold"
+    }, {
+      angle = 22.5,
+      time = 9.9166669845581,
+      type = "block"
+    }, {
+      angle = 292.5,
+      time = 15.5,
+      type = "side"
+    }, {
+      angle = 67.5,
+      time = 16.625,
+      type = "block"
+    }, {
+      angle = 22.5,
+      time = 5.8333334922791,
+      type = "block"
+    }, {
+      angle = 22.5,
+      time = 11.333333015442,
+      type = "block"
+    }, {
+      angle = 112.5,
+      time = 16.125,
+      type = "block"
+    }, {
+      angle = 90,
+      time = 16.375,
+      type = "block"
+    }, {
+      angle = 157.5,
+      time = 15.875,
+      type = "side"
+    } },
+  playbackError = <function 208>,
+  pt = 0,
+  restartLevel = <function 209>,
+  resume = <function 210>,
+  scrollSpeed = 1,
+  songOffset = 0,
+  soundData = <userdata 9>,
+  startBeat = 0,
+  tags = {},
+  tapTiming = {},
+  taps = { {
+      allowRelease = false,
+      antiSpamWindow = 300,
+      beat = 1,
+      delete = false,
+      hit = false,
+      passedWindow = <function 211>,
+      score = 1,
+      timingWindow = 200,
+      update = <function 212>
+    } },
+  timingInfo = {
+    initial = {
+      bpm = 84
+    },
+    timingPoints = {}
+  },
+  updateFunc = <function 213>,
+  vfx = {
+    accuracyX = 0,
+    accuracyY = 0,
+    angleTwist = {
+      distance = 8,
+      ease = "linear",
+      offset = 0
+    },
+    bgNoise = 0,
+    bgNoiseColor = 0,
+    bgNoise_OLD = {
+      a = 1,
+      b = 1,
+      enable = false,
+      g = 1,
+      r = 1
+    },
+    canvPos = {
+      kx = 0,
+      ky = 0,
+      ox = 300,
+      oy = 180,
+      r = 0,
+      sx = 1,
+      sy = 1,
+      x = 300,
+      y = 180
+    },
+    comboX = 0,
+    comboY = 0,
+    deco = {
+      spiral = {
+        class = <table 38>,
+        delete = false,
+        drawLayer = "fg",
+        drawOrder = 0,
+        hasMoved = false,
+        hide = false,
+        kx = 0,
+        ky = 0,
+        layer = 999,
+        outline = false,
+        ox = 0,
+        oy = 0,
+        r = 0,
+        recolor = -1,
+        spr = <userdata 10>,
+        sprite = "",
+        sx = 1,
+        sy = 1,
+        upLayer = 9,
+        x = 300,
+        y = 180,
+        <metatable> = <table 39>
+      },
+      tec = {
+        class = <table 38>,
+        delete = false,
+        drawLayer = "fg",
+        drawOrder = 0,
+        hasMoved = false,
+        hide = false,
+        kx = 0,
+        ky = 0,
+        layer = 999,
+        outline = false,
+        ox = 0,
+        oy = 0,
+        r = 0,
+        recolor = -1,
+        spr = <userdata 10>,
+        sprite = "",
+        sx = 1,
+        sy = 1,
+        upLayer = 9,
+        x = 300,
+        y = 180,
+        <metatable> = <table 39>
+      }
+    },
+    decoSprites = {
+      ["spiral.png"] = <userdata 11>,
+      ["tec.png"] = <userdata 12>
+    },
+    decoTemplates = {},
+    difficultyX = 0,
+    difficultyY = 0,
+    drawAccuracy = true,
+    drawCombo = true,
+    drawDifficulty = true,
+    drawSongTitle = true,
+    drawUI = true,
+    effectCanvas = <userdata 13>,
+    extraTapWidth = 2,
+    extraTapWidthPulse = 3,
+    glitchUIElements = 0,
+    hglitch = {
+      resolution = 3,
+      strength = 0
+    },
+    holdSegmentLimit = 0,
+    hom = false,
+    homCanvPos = {
+      kx = 0,
+      ky = 0,
+      ox = 300,
+      oy = 180,
+      r = 0,
+      sx = 1,
+      sy = 1,
+      x = 300,
+      y = 180
+    },
+    hwaves = {
+      flip = false,
+      flipMult = 1,
+      offset = 0,
+      offsetDelta = 0,
+      period = 16,
+      strength = 0
+    },
+    noteXScale = 1,
+    noteXSkew = 0,
+    noteYScale = 1,
+    noteYSkew = 0,
+    notesFollowPlayer = true,
+    objects = {},
+    pixelate = 1,
+    songNameX = 0,
+    songNameY = 0,
+    tapPulsePeriod = 1,
+    tapPulseStrength = 1.5,
+    tapWidthPulse = 3,
+    time = 2.7711404000001,
+    uiColor = 1,
+    vglitch = {
+      resolution = 3,
+      strength = 0
+    },
+    vwaves = {
+      flip = false,
+      flipMult = 1,
+      offset = 0,
+      offsetDelta = 0,
+      period = 16,
+      strength = 0
+    }
+  },
+  <metatable> = <table 1>
+}
+
+	entities:
+	{ {
+    angle = 9.9058055415833,
+    angleDelta = 1.4210854715202e-14,
+    anglePrevFrame = 9.9058055415833,
+    bobI = 4.4879943600001,
+    bodyPulse = 0,
+    bodyRadius = 20,
+    cEmotion = "idle",
+    cMode = true,
+    circleX = 0,
+    circleY = 0,
+    class = <1>{
+      __declaredMethods = {
+        doPaddleFeedback = <function 1>,
+        draw = <function 2>,
+        getDistance = <function 3>,
+        growTransition = <function 4>,
+        hurtPulse = <function 5>,
+        initialize = <function 6>,
+        newPaddle = <function 7>,
+        savePaddleSize = <function 8>,
+        update = <function 9>
+      },
+      __instanceDict = <2>{
+        __index = <table 2>,
+        __tostring = <function 10>,
+        doPaddleFeedback = <function 1>,
+        draw = <function 2>,
+        getDistance = <function 3>,
+        growTransition = <function 4>,
+        hurtPulse = <function 5>,
+        initialize = <function 6>,
+        isInstanceOf = <function 11>,
+        newPaddle = <function 7>,
+        savePaddleSize = <function 8>,
+        update = <function 9>
+      },
+      name = "Player",
+      static = <3>{
+        <metatable> = {
+          __index = <function 12>
+        }
+      },
+      subclasses = {
+        <metatable> = {
+          __mode = "k"
+        }
+      },
+      super = <4>{
+        __declaredMethods = {
+          __tostring = <function 10>,
+          draw = <function 13>,
+          initialize = <function 14>,
+          isInstanceOf = <function 11>,
+          update = <function 15>
+        },
+        __instanceDict = <5>{
+          __index = <table 5>,
+          __tostring = <function 10>,
+          draw = <function 13>,
+          initialize = <function 14>,
+          isInstanceOf = <function 11>,
+          update = <function 15>
+        },
+        name = "Entity",
+        static = <6>{
+          allocate = <function 16>,
+          include = <function 17>,
+          isSubclassOf = <function 18>,
+          new = <function 19>,
+          subclass = <function 20>,
+          subclassed = <function 21>,
+          <metatable> = {
+            __index = <function 22>
+          }
+        },
+        subclasses = {
+          [{
+            __declaredMethods = {
+              draw = <function 23>,
+              initialize = <function 24>,
+              update = <function 25>
+            },
+            __instanceDict = <7>{
+              __index = <table 7>,
+              __tostring = <function 10>,
+              draw = <function 23>,
+              initialize = <function 24>,
+              isInstanceOf = <function 11>,
+              update = <function 25>
+            },
+            name = "TitleParticle",
+            static = <8>{
+              <metatable> = {
+                __index = <function 26>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 8>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              getLevelSaveName = <function 30>,
+              initialize = <function 31>,
+              iterateEvents = <function 32>,
+              loadLevel = <function 33>,
+              loadMetadata = <function 34>,
+              newLevel = <function 35>,
+              saveLevel = <function 36>,
+              upgradeLevel = <function 37>
+            },
+            __instanceDict = <9>{
+              __index = <table 9>,
+              __tostring = <function 10>,
+              draw = <function 13>,
+              getLevelSaveName = <function 30>,
+              initialize = <function 31>,
+              isInstanceOf = <function 11>,
+              iterateEvents = <function 32>,
+              loadLevel = <function 33>,
+              loadMetadata = <function 34>,
+              newLevel = <function 35>,
+              saveLevel = <function 36>,
+              update = <function 15>,
+              upgradeLevel = <function 37>
+            },
+            name = "LevelManager",
+            static = <10>{
+              <metatable> = {
+                __index = <function 38>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 10>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 39>,
+              initialize = <function 40>,
+              update = <function 41>
+            },
+            __instanceDict = <11>{
+              __index = <table 11>,
+              __tostring = <function 10>,
+              draw = <function 39>,
+              initialize = <function 40>,
+              isInstanceOf = <function 11>,
+              update = <function 41>
+            },
+            name = "Tutorial",
+            static = <12>{
+              <metatable> = {
+                __index = <function 42>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 12>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 43>,
+              exitLevel = <function 44>,
+              finish = <function 45>,
+              initialize = <function 46>,
+              onQuit = <function 47>,
+              update = <function 48>
+            },
+            __instanceDict = <13>{
+              __index = <table 13>,
+              __tostring = <function 10>,
+              draw = <function 43>,
+              exitLevel = <function 44>,
+              finish = <function 45>,
+              initialize = <function 46>,
+              isInstanceOf = <function 11>,
+              onQuit = <function 47>,
+              update = <function 48>
+            },
+            name = "Calibration",
+            static = <14>{
+              <metatable> = {
+                __index = <function 49>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 14>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 50>,
+              initialize = <function 51>,
+              update = <function 52>
+            },
+            __instanceDict = <15>{
+              __index = <table 15>,
+              __tostring = <function 10>,
+              draw = <function 50>,
+              initialize = <function 51>,
+              isInstanceOf = <function 11>,
+              update = <function 52>
+            },
+            name = "MissParticle",
+            static = <16>{
+              <metatable> = {
+                __index = <function 53>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 16>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              addOnBeatHook = <function 54>,
+              clearOnBeatHooks = <function 55>,
+              draw = <function 56>,
+              initialize = <function 57>,
+              play = <function 58>,
+              stop = <function 59>,
+              update = <function 60>
+            },
+            __instanceDict = <17>{
+              __index = <table 17>,
+              __tostring = <function 10>,
+              addOnBeatHook = <function 54>,
+              clearOnBeatHooks = <function 55>,
+              draw = <function 56>,
+              initialize = <function 57>,
+              isInstanceOf = <function 11>,
+              play = <function 58>,
+              stop = <function 59>,
+              update = <function 60>
+            },
+            name = "MenuMusicManager",
+            static = <18>{
+              <metatable> = {
+                __index = <function 61>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 18>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 62>,
+              initialize = <function 63>,
+              update = <function 64>
+            },
+            __instanceDict = <19>{
+              __index = <table 19>,
+              __tostring = <function 10>,
+              draw = <function 62>,
+              initialize = <function 63>,
+              isInstanceOf = <function 11>,
+              update = <function 64>
+            },
+            name = "HitParticle",
+            static = <20>{
+              <metatable> = {
+                __index = <function 65>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 20>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 66>,
+              initParticleSys = <function 67>,
+              initialize = <function 68>,
+              update = <function 69>
+            },
+            __instanceDict = <21>{
+              __index = <table 21>,
+              __tostring = <function 10>,
+              draw = <function 66>,
+              initParticleSys = <function 67>,
+              initialize = <function 68>,
+              isInstanceOf = <function 11>,
+              update = <function 69>
+            },
+            name = "SideParticle",
+            static = <22>{
+              <metatable> = {
+                __index = <function 70>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 22>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 71>,
+              initialize = <function 72>,
+              update = <function 73>
+            },
+            __instanceDict = <23>{
+              __index = <table 23>,
+              __tostring = <function 10>,
+              draw = <function 71>,
+              initialize = <function 72>,
+              isInstanceOf = <function 11>,
+              update = <function 73>
+            },
+            name = "RainBG",
+            static = <24>{
+              <metatable> = {
+                __index = <function 74>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 24>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [<table 1>] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 75>,
+              initialize = <function 76>,
+              update = <function 77>
+            },
+            __instanceDict = <25>{
+              __index = <table 25>,
+              __tostring = <function 10>,
+              draw = <function 75>,
+              initialize = <function 76>,
+              isInstanceOf = <function 11>,
+              update = <function 77>
+            },
+            name = "Exampleentity",
+            static = <26>{
+              <metatable> = {
+                __index = <function 78>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 26>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 79>,
+              initialize = <function 80>,
+              update = <function 81>
+            },
+            __instanceDict = <27>{
+              __index = <table 27>,
+              __tostring = <function 10>,
+              draw = <function 79>,
+              initialize = <function 80>,
+              isInstanceOf = <function 11>,
+              update = <function 81>
+            },
+            name = "TutorialBG",
+            static = <28>{
+              <metatable> = {
+                __index = <function 82>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 28>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              addSection = <function 83>,
+              changeOffset = <function 84>,
+              draw = <function 85>,
+              initialize = <function 86>,
+              resetPlayerRot = <function 87>,
+              update = <function 88>
+            },
+            __instanceDict = <29>{
+              __index = <table 29>,
+              __tostring = <function 10>,
+              addSection = <function 83>,
+              changeOffset = <function 84>,
+              draw = <function 85>,
+              initialize = <function 86>,
+              isInstanceOf = <function 11>,
+              resetPlayerRot = <function 87>,
+              update = <function 88>
+            },
+            name = "LawrenceBG",
+            static = <30>{
+              <metatable> = {
+                __index = <function 89>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 30>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 90>,
+              drawBG = <function 91>,
+              endStencil = <function 92>,
+              initialize = <function 93>,
+              newRaindrop = <function 94>,
+              startStencil = <function 95>,
+              update = <function 96>
+            },
+            __instanceDict = <31>{
+              __index = <table 31>,
+              __tostring = <function 10>,
+              draw = <function 90>,
+              drawBG = <function 91>,
+              endStencil = <function 92>,
+              initialize = <function 93>,
+              isInstanceOf = <function 11>,
+              newRaindrop = <function 94>,
+              startStencil = <function 95>,
+              update = <function 96>
+            },
+            name = "Rain",
+            static = <32>{
+              <metatable> = {
+                __index = <function 97>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 32>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [<33>{
+            __declaredMethods = {
+              draw = <function 98>,
+              drawMain = <function 99>,
+              initialize = <function 100>,
+              update = <function 101>,
+              updateSprite = <function 102>
+            },
+            __instanceDict = <34>{
+              __index = <table 34>,
+              __tostring = <function 10>,
+              draw = <function 98>,
+              drawMain = <function 99>,
+              initialize = <function 100>,
+              isInstanceOf = <function 11>,
+              update = <function 101>,
+              updateSprite = <function 102>
+            },
+            name = "Deco",
+            static = <35>{
+              <metatable> = {
+                __index = <function 103>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 35>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [<36>{
+            __declaredMethods = {
+              checkIfActive = <function 104>,
+              checkPassedWindow = <function 105>,
+              checkTap = <function 106>,
+              checkTouchingPaddle = <function 107>,
+              cleanup = <function 108>,
+              draw = <function 109>,
+              drawSprite = <function 110>,
+              drawTap = <function 111>,
+              getPositions = <function 112>,
+              getTapMult = <function 113>,
+              inTimingWindow = <function 114>,
+              initialize = <function 115>,
+              makeParticles = <function 116>,
+              onHit = <function 117>,
+              onMiss = <function 118>,
+              update = <function 119>,
+              updateAngle = <function 120>,
+              updateOrigin = <function 121>,
+              updatePositions = <function 122>,
+              updateProgress = <function 123>
+            },
+            __instanceDict = <37>{
+              __index = <table 37>,
+              __tostring = <function 10>,
+              checkIfActive = <function 104>,
+              checkPassedWindow = <function 105>,
+              checkTap = <function 106>,
+              checkTouchingPaddle = <function 107>,
+              cleanup = <function 108>,
+              draw = <function 109>,
+              drawSprite = <function 110>,
+              drawTap = <function 111>,
+              getPositions = <function 112>,
+              getTapMult = <function 113>,
+              inTimingWindow = <function 114>,
+              initialize = <function 115>,
+              isInstanceOf = <function 11>,
+              makeParticles = <function 116>,
+              onHit = <function 117>,
+              onMiss = <function 118>,
+              update = <function 119>,
+              updateAngle = <function 120>,
+              updateOrigin = <function 121>,
+              updatePositions = <function 122>,
+              updateProgress = <function 123>
+            },
+            name = "Block",
+            static = <38>{
+              <metatable> = {
+                __index = <function 124>
+              }
+            },
+            subclasses = {
+              [{
+                __declaredMethods = {
+                  initialize = <function 125>,
+                  update = <function 126>
+                },
+                __instanceDict = <39>{
+                  __index = <table 39>,
+                  __tostring = <function 10>,
+                  checkIfActive = <function 104>,
+                  checkPassedWindow = <function 105>,
+                  checkTap = <function 106>,
+                  checkTouchingPaddle = <function 107>,
+                  cleanup = <function 108>,
+                  draw = <function 109>,
+                  drawSprite = <function 110>,
+                  drawTap = <function 111>,
+                  getPositions = <function 112>,
+                  getTapMult = <function 113>,
+                  inTimingWindow = <function 114>,
+                  initialize = <function 125>,
+                  isInstanceOf = <function 11>,
+                  makeParticles = <function 116>,
+                  onHit = <function 117>,
+                  onMiss = <function 118>,
+                  update = <function 126>,
+                  updateAngle = <function 120>,
+                  updateOrigin = <function 121>,
+                  updatePositions = <function 122>,
+                  updateProgress = <function 123>
+                },
+                name = "Mine",
+                static = <40>{
+                  <metatable> = {
+                    __index = <function 127>
+                  }
+                },
+                subclasses = {
+                  <metatable> = {
+                    __mode = "k"
+                  }
+                },
+                super = <table 36>,
+                <metatable> = {
+                  __call = <function 27>,
+                  __index = <table 40>,
+                  __newindex = <function 28>,
+                  __tostring = <function 29>
+                }
+              }] = true,
+              [<41>{
+                __declaredMethods = {
+                  checkEndPassedWindow = <function 128>,
+                  checkEndTap = <function 129>,
+                  cleanup = <function 130>,
+                  draw = <function 131>,
+                  drawHold = <function 132>,
+                  getPositions = <function 133>,
+                  initialize = <function 134>,
+                  update = <function 135>,
+                  updateDuringHit = <function 136>
+                },
+                __instanceDict = <42>{
+                  __index = <table 42>,
+                  __tostring = <function 10>,
+                  checkEndPassedWindow = <function 128>,
+                  checkEndTap = <function 129>,
+                  checkIfActive = <function 104>,
+                  checkPassedWindow = <function 105>,
+                  checkTap = <function 106>,
+                  checkTouchingPaddle = <function 107>,
+                  cleanup = <function 130>,
+                  draw = <function 131>,
+                  drawHold = <function 132>,
+                  drawSprite = <function 110>,
+                  drawTap = <function 111>,
+                  getPositions = <function 133>,
+                  getTapMult = <function 113>,
+                  inTimingWindow = <function 114>,
+                  initialize = <function 134>,
+                  isInstanceOf = <function 11>,
+                  makeParticles = <function 116>,
+                  onHit = <function 117>,
+                  onMiss = <function 118>,
+                  update = <function 135>,
+                  updateAngle = <function 120>,
+                  updateDuringHit = <function 136>,
+                  updateOrigin = <function 121>,
+                  updatePositions = <function 122>,
+                  updateProgress = <function 123>
+                },
+                name = "Hold",
+                static = <43>{
+                  <metatable> = {
+                    __index = <function 137>
+                  }
+                },
+                subclasses = {
+                  [<44>{
+                    __declaredMethods = {
+                      initialize = <function 138>,
+                      update = <function 139>
+                    },
+                    __instanceDict = <45>{
+                      __index = <table 45>,
+                      __tostring = <function 10>,
+                      checkEndPassedWindow = <function 128>,
+                      checkEndTap = <function 129>,
+                      checkIfActive = <function 104>,
+                      checkPassedWindow = <function 105>,
+                      checkTap = <function 106>,
+                      checkTouchingPaddle = <function 107>,
+                      cleanup = <function 130>,
+                      draw = <function 131>,
+                      drawHold = <function 132>,
+                      drawSprite = <function 110>,
+                      drawTap = <function 111>,
+                      getPositions = <function 133>,
+                      getTapMult = <function 113>,
+                      inTimingWindow = <function 114>,
+                      initialize = <function 138>,
+                      isInstanceOf = <function 11>,
+                      makeParticles = <function 116>,
+                      onHit = <function 117>,
+                      onMiss = <function 118>,
+                      update = <function 139>,
+                      updateAngle = <function 120>,
+                      updateDuringHit = <function 136>,
+                      updateOrigin = <function 121>,
+                      updatePositions = <function 122>,
+                      updateProgress = <function 123>
+                    },
+                    name = "MineHold",
+                    static = <46>{
+                      <metatable> = {
+                        __index = <function 140>
+                      }
+                    },
+                    subclasses = {
+                      <metatable> = {
+                        __mode = "k"
+                      }
+                    },
+                    super = <table 41>,
+                    <metatable> = {
+                      __call = <function 27>,
+                      __index = <table 46>,
+                      __newindex = <function 28>,
+                      __tostring = <function 29>
+                    }
+                  }] = true,
+                  <metatable> = {
+                    __mode = "k"
+                  }
+                },
+                super = <table 36>,
+                <metatable> = {
+                  __call = <function 27>,
+                  __index = <table 43>,
+                  __newindex = <function 28>,
+                  __tostring = <function 29>
+                }
+              }] = true,
+              [{
+                __declaredMethods = {
+                  draw = <function 141>,
+                  initialize = <function 142>,
+                  makeParticles = <function 143>,
+                  onHit = <function 144>,
+                  update = <function 145>
+                },
+                __instanceDict = <47>{
+                  __index = <table 47>,
+                  __tostring = <function 10>,
+                  checkIfActive = <function 104>,
+                  checkPassedWindow = <function 105>,
+                  checkTap = <function 106>,
+                  checkTouchingPaddle = <function 107>,
+                  cleanup = <function 108>,
+                  draw = <function 141>,
+                  drawSprite = <function 110>,
+                  drawTap = <function 111>,
+                  getPositions = <function 112>,
+                  getTapMult = <function 113>,
+                  inTimingWindow = <function 114>,
+                  initialize = <function 142>,
+                  isInstanceOf = <function 11>,
+                  makeParticles = <function 143>,
+                  onHit = <function 144>,
+                  onMiss = <function 118>,
+                  update = <function 145>,
+                  updateAngle = <function 120>,
+                  updateOrigin = <function 121>,
+                  updatePositions = <function 122>,
+                  updateProgress = <function 123>
+                },
+                name = "ExtraTap",
+                static = <48>{
+                  <metatable> = {
+                    __index = <function 146>
+                  }
+                },
+                subclasses = {
+                  <metatable> = {
+                    __mode = "k"
+                  }
+                },
+                super = <table 36>,
+                <metatable> = {
+                  __call = <function 27>,
+                  __index = <table 48>,
+                  __newindex = <function 28>,
+                  __tostring = <function 29>
+                }
+              }] = true,
+              [<49>{
+                __declaredMethods = {
+                  draw = <function 147>,
+                  drawTap = <function 148>,
+                  initialize = <function 149>,
+                  update = <function 150>
+                },
+                __instanceDict = <50>{
+                  __index = <table 50>,
+                  __tostring = <function 10>,
+                  checkIfActive = <function 104>,
+                  checkPassedWindow = <function 105>,
+                  checkTap = <function 106>,
+                  checkTouchingPaddle = <function 107>,
+                  cleanup = <function 108>,
+                  draw = <function 147>,
+                  drawSprite = <function 110>,
+                  drawTap = <function 148>,
+                  getPositions = <function 112>,
+                  getTapMult = <function 113>,
+                  inTimingWindow = <function 114>,
+                  initialize = <function 149>,
+                  isInstanceOf = <function 11>,
+                  makeParticles = <function 116>,
+                  onHit = <function 117>,
+                  onMiss = <function 118>,
+                  update = <function 150>,
+                  updateAngle = <function 120>,
+                  updateOrigin = <function 121>,
+                  updatePositions = <function 122>,
+                  updateProgress = <function 123>
+                },
+                name = "Side",
+                static = <51>{
+                  <metatable> = {
+                    __index = <function 151>
+                  }
+                },
+                subclasses = {
+                  <metatable> = {
+                    __mode = "k"
+                  }
+                },
+                super = <table 36>,
+                <metatable> = {
+                  __call = <function 27>,
+                  __index = <table 51>,
+                  __newindex = <function 28>,
+                  __tostring = <function 29>
+                }
+              }] = true,
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 38>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              addBoolean = <function 152>,
+              addCustom = <function 153>,
+              addEnum = <function 154>,
+              addNumber = <function 155>,
+              addOption = <function 156>,
+              addText = <function 157>,
+              calculateWidth = <function 158>,
+              defineSubmenu = <function 159>,
+              draw = <function 160>,
+              initialize = <function 161>,
+              leftRightSelectedText = <function 162>,
+              numberSelectedText = <function 163>,
+              setSelection = <function 164>,
+              setSubmenu = <function 165>,
+              update = <function 166>
+            },
+            __instanceDict = <52>{
+              __index = <table 52>,
+              __tostring = <function 10>,
+              addBoolean = <function 152>,
+              addCustom = <function 153>,
+              addEnum = <function 154>,
+              addNumber = <function 155>,
+              addOption = <function 156>,
+              addText = <function 157>,
+              calculateWidth = <function 158>,
+              defineSubmenu = <function 159>,
+              draw = <function 160>,
+              initialize = <function 161>,
+              isInstanceOf = <function 11>,
+              leftRightSelectedText = <function 162>,
+              numberSelectedText = <function 163>,
+              setSelection = <function 164>,
+              setSubmenu = <function 165>,
+              update = <function 166>
+            },
+            name = "OptionsList",
+            static = <53>{
+              <metatable> = {
+                __index = <function 167>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 53>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              addToScore = <function 168>,
+              beatToMs = <function 169>,
+              checkEvent = <function 170>,
+              draw = <function 171>,
+              drawCanv = <function 172>,
+              drawExpandedHud = <function 173>,
+              endOnTopShader = <function 174>,
+              getBPM = <function 175>,
+              getVFXAngle = <function 176>,
+              gradeCalc = <function 177>,
+              handleMiss = <function 178>,
+              inTimingWindow = <function 179>,
+              initialize = <function 180>,
+              msToBeat = <function 181>,
+              newTap = <function 182>,
+              resetLevel = <function 183>,
+              runQueuedEvents = <function 184>,
+              startOnTopShader = <function 185>,
+              stopLevel = <function 186>,
+              update = <function 187>,
+              updateTaps = <function 188>
+            },
+            __instanceDict = <54>{
+              __index = <table 54>,
+              __tostring = <function 10>,
+              addToScore = <function 168>,
+              beatToMs = <function 169>,
+              checkEvent = <function 170>,
+              draw = <function 171>,
+              drawCanv = <function 172>,
+              drawExpandedHud = <function 173>,
+              endOnTopShader = <function 174>,
+              getBPM = <function 175>,
+              getVFXAngle = <function 176>,
+              gradeCalc = <function 177>,
+              handleMiss = <function 178>,
+              inTimingWindow = <function 179>,
+              initialize = <function 180>,
+              isInstanceOf = <function 11>,
+              msToBeat = <function 181>,
+              newTap = <function 182>,
+              resetLevel = <function 183>,
+              runQueuedEvents = <function 184>,
+              startOnTopShader = <function 185>,
+              stopLevel = <function 186>,
+              update = <function 187>,
+              updateTaps = <function 188>
+            },
+            name = "GameManager",
+            static = <55>{
+              <metatable> = {
+                __index = <function 189>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 55>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          [{
+            __declaredMethods = {
+              draw = <function 190>,
+              initialize = <function 191>,
+              update = <function 192>
+            },
+            __instanceDict = <56>{
+              __index = <table 56>,
+              __tostring = <function 10>,
+              draw = <function 190>,
+              initialize = <function 191>,
+              isInstanceOf = <function 11>,
+              update = <function 192>
+            },
+            name = "MonitorTheme",
+            static = <57>{
+              <metatable> = {
+                __index = <function 193>
+              }
+            },
+            subclasses = {
+              <metatable> = {
+                __mode = "k"
+              }
+            },
+            super = <table 4>,
+            <metatable> = {
+              __call = <function 27>,
+              __index = <table 57>,
+              __newindex = <function 28>,
+              __tostring = <function 29>
+            }
+          }] = true,
+          <metatable> = {
+            __mode = "k"
+          }
+        },
+        <metatable> = {
+          __call = <function 27>,
+          __index = <table 6>,
+          __newindex = <function 28>,
+          __tostring = <function 29>
+        }
+      },
+      <metatable> = {
+        __call = <function 27>,
+        __index = <table 3>,
+        __newindex = <function 28>,
+        __tostring = <function 29>
+      }
+    },
+    cumulativeAngle = 369.90580554158,
+    delete = false,
+    drawScale = 1,
+    emoTimer = -149.599812,
+    extend = 0,
+    feedbackAmplitude = 2.5,
+    feedbackDuration = 4,
+    feedbackEase = "outQuad",
+    feedbackOffset = 0,
+    forceSprite = "",
+    layer = 0,
+    lineWidth = 2,
+    lookRadius = 6,
+    lookYOffset = 0,
+    maxBodyPulse = 0.2,
+    ouchTime = 15,
+    paddleCount = 1,
+    paddleDistance = 31,
+    paddles = { {
+        baseAngle = 0,
+        enabled = true,
+        handleSize = 10,
+        paddleID = 0,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 1,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 2,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 3,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 4,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 5,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 6,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      }, {
+        baseAngle = 0,
+        enabled = false,
+        handleSize = 10,
+        paddleID = 7,
+        paddleSize = 70,
+        paddleSizePrevFrame = 70,
+        paddleWidth = 11
+      } },
+    radius = 256,
+    snapX = 0,
+    snapY = 0,
+    spr = {
+      [":3"] = <userdata 1>,
+      angry = <userdata 2>,
+      happy = <userdata 3>,
+      idle = <userdata 4>,
+      miss = <userdata 5>
+    },
+    upLayer = 0,
+    x = 300,
+    y = 180,
+    <metatable> = <table 2>
+  }, {
+    class = <table 33>,
+    delete = false,
+    drawLayer = "fg",
+    drawOrder = 0,
+    hasMoved = false,
+    hide = false,
+    kx = 0,
+    ky = 0,
+    layer = 999,
+    outline = false,
+    ox = 0,
+    oy = 0,
+    r = 0,
+    recolor = -1,
+    spr = <userdata 6>,
+    sprite = "",
+    sx = 1,
+    sy = 1,
+    upLayer = 9,
+    x = 300,
+    y = 180,
+    <metatable> = <table 34>
+  }, {
+    class = <table 33>,
+    delete = false,
+    drawLayer = "fg",
+    drawOrder = 0,
+    hasMoved = false,
+    hide = false,
+    kx = 0,
+    ky = 0,
+    layer = 999,
+    outline = false,
+    ox = 0,
+    oy = 0,
+    r = 0,
+    recolor = -1,
+    spr = <userdata 6>,
+    sprite = "",
+    sx = 1,
+    sy = 1,
+    upLayer = 9,
+    x = 300,
+    y = 180,
+    <metatable> = <table 34>
+  }, {
+    angle = 180,
+    angle2 = 180,
+    barelyWindow = 30,
+    class = <table 44>,
+    delete = false,
+    drawAngle = 180,
+    drawAngle2 = 180,
+    duration = 3.9999988079071,
+    endAngle = 180,
+    endTap = false,
+    hb = 0,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    leniencyFrames = 15,
+    mineStripe = true,
+    moveTime = 7.4710657199998,
+    name = "mine",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.4475456869626,
+    reachedEnd = false,
+    sMult = 1,
+    sMult2 = 1,
+    spinEase = "linear",
+    spr = <58>{
+      addState = <function 194>,
+      draw = <function 195>,
+      drawState = <function 196>,
+      frames = 5,
+      height = 32,
+      image = <userdata 8>,
+      imageheight = 32,
+      imagewidth = 160,
+      instance = <function 197>,
+      mostrecentstate = "all",
+      quads = { <userdata 9>, <userdata 10>, <userdata 11>, <userdata 12>,
+        [0] = <userdata 13>
+      },
+      states = {
+        all = {
+          frames = { 0, 1, 2, 3, 4 },
+          loop = true,
+          speed = 60
+        }
+      },
+      width = 32
+    },
+    startangle = 180,
+    tap = false,
+    tapTimingWindow = 200,
+    tickRate = 0.5,
+    timeOff = 0,
+    upLayer = 3,
+    x = 300,
+    x2 = 300,
+    y = 518.91957359998,
+    y2 = 798.91949015348,
+    <metatable> = <table 45>
+  }, {
+    angle = 360,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 360,
+    endAngle = 360,
+    hb = 0.33333334326744,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.8043990632673,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.42843058291797,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <59>{
+      addState = <function 198>,
+      draw = <function 199>,
+      drawState = <function 200>,
+      frames = 5,
+      height = 32,
+      image = <userdata 14>,
+      imageheight = 32,
+      imagewidth = 160,
+      instance = <function 201>,
+      mostrecentstate = "all",
+      quads = { <userdata 15>, <userdata 16>, <userdata 17>, <userdata 18>,
+        [0] = <userdata 19>
+      },
+      states = {
+        all = {
+          frames = { 0, 1, 2, 3, 4 },
+          loop = true,
+          speed = 60
+        }
+      },
+      width = 32
+    },
+    startangle = 360,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = 300,
+    y = -182.2529076287,
+    <metatable> = <table 37>
+  }, {
+    angle = 337.5,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 337.5,
+    endAngle = 337.5,
+    hb = 0.5,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.9710657199998,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.41947254701598,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 337.5,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = 156.90717414627,
+    y = -165.45664085437,
+    <metatable> = <table 37>
+  }, {
+    angle = 315,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 315,
+    endAngle = 315,
+    hb = 0.75,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.9986569599999,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.39021982010342,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 315,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = 23.224565218304,
+    y = -96.775434781696,
+    <metatable> = <table 37>
+  }, {
+    angle = 292.5,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 292.5,
+    endAngle = 292.5,
+    hb = 1,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.9972841599998,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.35885453393719,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 292.5,
+    tap = true,
+    tapManager = {
+      allowRelease = false,
+      antiSpamWindow = 300,
+      beat = 1,
+      delete = false,
+      hit = false,
+      passedWindow = <function 202>,
+      score = 1,
+      timingWindow = 200,
+      update = <function 203>
+    },
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = -77.792424492268,
+    y = 23.513254013489,
+    <metatable> = <table 37>
+  }, {
+    angle = 0,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 0,
+    endAngle = 0,
+    hb = 1.5,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.9950187599999,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.29613392426863,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 0,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = 300,
+    y = -263.91957359998,
+    <metatable> = <table 37>
+  }, {
+    angle = 22.5,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 22.5,
+    endAngle = 22.5,
+    hb = 1.75,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.9945073799997,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.26481743018918,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 22.5,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = 476.57762618568,
+    y = -246.29609994911,
+    <metatable> = <table 37>
+  }, {
+    angle = 348.75,
+    angle2 = 270,
+    barelyWindow = 30,
+    class = <table 44>,
+    delete = false,
+    drawAngle = 348.75,
+    drawAngle2 = 270,
+    duration = 0.1875,
+    endAngle = 348.75,
+    endTap = false,
+    hb = 1.875,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    leniencyFrames = 15,
+    mineStripe = true,
+    moveTime = 7.9962669200001,
+    name = "mine",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.24934690899492,
+    reachedEnd = false,
+    sMult = 1,
+    sMult2 = 1,
+    spinEase = "linear",
+    spr = <table 58>,
+    startangle = 348.75,
+    tap = false,
+    tapTimingWindow = 200,
+    tickRate = 0.5,
+    timeOff = 0,
+    upLayer = 3,
+    x = 208.27446648419,
+    x2 = -183.29457359998,
+    y = -281.13539708033,
+    y2 = 180,
+    <metatable> = <table 45>
+  }, {
+    angle = 45,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 45,
+    endAngle = 45,
+    hb = 2,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.9994485799999,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.23401939287172,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 45,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = 638.64727813552,
+    y = -158.64727813552,
+    <metatable> = <table 37>
+  }, {
+    angle = 360,
+    barelyWindow = 30,
+    class = <table 49>,
+    delete = false,
+    drawAngle = 360,
+    endAngle = 360,
+    hb = 2.5,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    leftHit = false,
+    moveTime = 7.9968599199998,
+    name = "side",
+    ox = 300,
+    oy = 180,
+    positionOffset = 14.5,
+    progress = 0.1712468961192,
+    sMult = 1,
+    sideHitYet = false,
+    sideTimingWindow = 200,
+    skipoverWindow = 80,
+    spinEase = "linear",
+    spr = {
+      addState = <function 204>,
+      draw = <function 205>,
+      drawState = <function 206>,
+      frames = 5,
+      height = 32,
+      image = <userdata 20>,
+      imageheight = 32,
+      imagewidth = 160,
+      instance = <function 207>,
+      mostrecentstate = "all",
+      quads = { <userdata 21>, <userdata 22>, <userdata 23>, <userdata 24>,
+        [0] = <userdata 25>
+      },
+      states = {
+        all = {
+          frames = { 0, 1, 2, 3, 4 },
+          loop = true,
+          speed = 60
+        }
+      },
+      width = 32
+    },
+    startangle = 360,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = 300,
+    y = -319.41957359998,
+    <metatable> = <table 50>
+  }, {
+    angle = 270,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 270,
+    endAngle = 270,
+    hb = 3,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.99632828,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.1086630975586,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 270,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = -248.91957359998,
+    y = 180,
+    <metatable> = <table 37>
+  }, {
+    angle = 315,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 315,
+    endAngle = 315,
+    hb = 3.5,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.9995253999998,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.046515624539426,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 315,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = -112.89349016011,
+    y = -232.89349016011,
+    <metatable> = <table 37>
+  }, {
+    angle = 337.5,
+    barelyWindow = 30,
+    class = <table 36>,
+    delete = false,
+    drawAngle = 337.5,
+    endAngle = 337.5,
+    hb = 3.75,
+    hitSound = <userdata 7>,
+    hitYet = false,
+    inverse = false,
+    layer = 1,
+    moveTime = 7.9989052399996,
+    name = "block",
+    ox = 300,
+    oy = 180,
+    positionOffset = 0,
+    progress = 0.01518742332292,
+    sMult = 1,
+    spinEase = "linear",
+    spr = <table 59>,
+    startangle = 337.5,
+    tap = false,
+    tapTimingWindow = 200,
+    upLayer = 3,
+    x = 69.846693283209,
+    y = -375.63923450069,
+    <metatable> = <table 37>
+  } }
+
+	savedata:
+	{
+  options = {
+    accessibility = {
+      sides = "default",
+      taps = "default",
+      vfx = "full"
+    },
+    audio = {
+      hitsounds = true,
+      musicvolume = 7,
+      sfxvolume = 7
+    },
+    game = {
+      circleSnap = false,
+      cursorMode = "default",
+      forceMouseKeyboard = true,
+      inputOffset = 30,
+      lockMouseToWindow = true
+    },
+    graphics = {
+      displayMode = "borderless",
+      fullscreen = false,
+      hudStyle = "default",
+      windowScale = 2
+    },
+    language = "en"
+  },
+  seenEditorWarning = true,
+  seenInverseTutorial = true,
+  timesbooted = 0
+}
+
+	
